@@ -27,7 +27,7 @@ function AcademyTimeline(props) {
         <TimelineContent />
       </TimelineItem>
 
-      <TimelineItem data-aos="fade-right">
+      <TimelineItem>
         <TimelineSeparator>
           <TimelineDot variant="outlined" color="green" />
           <TimelineConnector
@@ -48,7 +48,7 @@ function AcademyTimeline(props) {
         />
       </TimelineItem>
 
-      <TimelineItem data-aos="fade-left">
+      <TimelineItem>
         <TimelineSeparator>
           <TimelineDot variant="outlined" color="green" />
           <TimelineConnector

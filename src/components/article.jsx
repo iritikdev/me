@@ -115,7 +115,7 @@ function Article(props) {
           {articles.map((article, index) => (
             <Card
               key={index}
-              data-aos={animate[index]}
+              // data-aos={animate[index]}
               sx={{
                 cursor: "pointer",
                 backgroundColor: theme.palette.blue[400],
