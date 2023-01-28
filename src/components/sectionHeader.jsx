@@ -15,9 +15,9 @@ function SectionHeader({ number, title }) {
           color: theme.palette.green.main,
           pr: 1,
           fontSize: {
-            xs: 14,
-            sm: 15,
-            md: 16,
+            xs: 16,
+            sm: 17,
+            md: 18,
           },
         }}
       >
@@ -28,7 +28,7 @@ function SectionHeader({ number, title }) {
         sx={{
           wordBreak: "keep-all",
           fontSize: {
-            xs: 18,
+            xs: 20,
             md: 22,
           },
           fontWeight: "bold",

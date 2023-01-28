@@ -27,9 +27,9 @@ function AcademyTimelineContent({
             display: "contents",
             fontFamily: "Fira Code",
             fontSize: {
-              xs: 12,
-              sm: 13,
-              md: 14,
+              xs: 13,
+              sm: 14,
+              md: 15,
             },
             mr: 1,
           }}
@@ -41,9 +41,9 @@ function AcademyTimelineContent({
           display={"contents"}
           sx={{
             fontSize: {
-              xs: 12,
-              sm: 13,
-              md: 14,
+              xs: 13,
+              sm: 14,
+              md: 15,
             },
           }}
           fontWeight="600"
@@ -56,7 +56,11 @@ function AcademyTimelineContent({
         sx={{
           pb: 0.7,
           color: "slate.400",
-          fontSize: 12,
+          fontSize: {
+            xs: 12,
+            sm: 13,
+            md: 14,
+          },
         }}
       >
         {college}
@@ -77,7 +81,7 @@ function AcademyTimelineContent({
       <AppButton
         sx={{
           py: 0.5,
-          fontSize: 10,
+          fontSize: 11,
           px: 1,
         }}
       >

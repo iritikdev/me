@@ -20,7 +20,7 @@ function Academy(props) {
           },
         }}
       >
-        <SectionHeader title={"Where I've learn"} number={"02."} />
+        <SectionHeader title={"Where I've studied"} number={"02."} />
         <AcademyTimeline />
       </Box>
     </div>

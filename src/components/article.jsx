@@ -28,7 +28,7 @@ const articles = [
     description:
       'Elon Musk has faced concern from Tesla investors and analysts due to his preoccupation with Twitter. Getty Images Jeffries analyst Philippe Houchois warned that Elon Musk poses a risk to Tesla on Thursday. Houchois called Musk "the enemy" inside of Tesla, in …',
     url: "https://biztoc.com/x/885316ca935d79ec",
-    urlToImage: "/src/assets/1.png",
+    urlToImage: one,
     publishedAt: "2023-01-28T10:58:06Z",
   },
   {
@@ -141,7 +141,7 @@ function Article(props) {
                   gutterBottom
                   variant="h6"
                   component="div"
-                  fontSize={13}
+                  fontSize={14}
                   fontWeight={600}
                   lineHeight={1.35}
                   color={theme.palette.slate[200]}
@@ -155,7 +155,7 @@ function Article(props) {
                 </Typography>
                 <Typography
                   variant="body2"
-                  fontSize={12.5}
+                  fontSize={13.5}
                   color={theme.palette.slate[400]}
                 >
                   {article.description.slice(0, 125)}
@@ -176,7 +176,7 @@ function Article(props) {
                   >
                     <Typography
                       sx={{
-                        fontSize: 10,
+                        fontSize: 12,
                         fontWeight: "300",
                         fontFamily: "Fira Code",
                       }}
