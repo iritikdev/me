@@ -72,3 +72,8 @@ body {
 }
 
 /* list */
+
+a {
+  text-decoration: none;
+  color: var(--color-accent);
+}

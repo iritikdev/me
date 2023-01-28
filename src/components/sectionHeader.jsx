@@ -28,7 +28,7 @@ function SectionHeader({ number, title }) {
         sx={{
           wordBreak: "keep-all",
           fontSize: {
-            xs: 16,
+            xs: 18,
             md: 22,
           },
           fontWeight: "bold",

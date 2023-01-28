@@ -31,7 +31,7 @@ function About(props) {
           px: {
             xs: 2.5,
             sm: 10,
-            md: 24,
+            md: 14,
           },
         }}
       >
@@ -46,8 +46,8 @@ function About(props) {
                   pb={2}
                   sx={{
                     fontSize: {
-                      xs: 13,
-                      md: 13.5,
+                      xs: 15,
+                      md: 16,
                     },
                   }}
                 >

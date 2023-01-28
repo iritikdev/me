@@ -89,19 +89,20 @@ function Navbar(props) {
                   >{` ${item}`}</Typography>
                 </Button>
               ))}
-              <a href={resume} download>
-                <AppButton
-                  sx={{
-                    color: theme.palette.green.main,
-                    fontSize: 14,
-                    textTransform: "none",
-                    paddingY: 1,
-                    ml: 2,
-                  }}
-                >
+
+              <AppButton
+                sx={{
+                  color: theme.palette.green.main,
+                  fontSize: 14,
+                  textTransform: "none",
+                  paddingY: 1,
+                  ml: 2,
+                }}
+              >
+                <a href={resume} download>
                   Resume
-                </AppButton>
-              </a>
+                </a>
+              </AppButton>
             </Box>
             {/* Mobile menu start */}
             <Box
@@ -189,24 +190,24 @@ function Navbar(props) {
                       </Button>
                     </ListItem>
                   ))}
-                  <a
-                    href={resume}
-                    download
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
+                  <AppButton
+                    sx={{
+                      py: 1.5,
+                      color: theme.palette.green.main,
+                      mx: 2,
                     }}
                   >
-                    <AppButton
-                      sx={{
-                        py: 1.5,
-                        color: theme.palette.green.main,
-                        mx: 2,
+                    <a
+                      href={resume}
+                      download
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
                       }}
                     >
                       Resume
-                    </AppButton>
-                  </a>
+                    </a>
+                  </AppButton>
                 </List>
               </Drawer>
             </Box>
