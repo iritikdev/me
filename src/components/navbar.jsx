@@ -54,7 +54,7 @@ function Navbar(props) {
           }}
         >
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <img src={logo} alt="Ritik Sharma logo" width={42} />
+            <img src={logo} alt="Ritik Sharma logo" width={54} />
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item, index) => (
                 <Button
@@ -70,7 +70,7 @@ function Navbar(props) {
                     sx={{
                       fontWeight: "300",
                       fontFamily: "Fira Code",
-                      fontSize: 10,
+                      fontSize: 14,
                       pr: 1,
                       color: theme.palette.green.main,
                     }}
@@ -78,7 +78,7 @@ function Navbar(props) {
                   <Typography
                     sx={{
                       pr: 1,
-                      fontSize: 11,
+                      fontSize: 14,
                       fontWeight: "300",
                       fontFamily: "Fira Code",
                       color: theme.palette.slate[200],
@@ -93,7 +93,7 @@ function Navbar(props) {
                 <AppButton
                   sx={{
                     color: theme.palette.green.main,
-                    fontSize: 11,
+                    fontSize: 14,
                     textTransform: "none",
                     paddingY: 1,
                     ml: 2,

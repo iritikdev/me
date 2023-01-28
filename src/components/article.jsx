@@ -127,8 +127,7 @@ function Article(props) {
                   }
                 ),
                 "&:hover": {
-                  translate: "0 -3px",
-                  transform: "scale(1.3)",
+                  translate: "0 -4px",
                 },
               }}
             >

@@ -9,22 +9,25 @@ function Hero(props) {
     <div id="" data-aos="fade-up">
       <Box
         sx={{
-          height: "90vh",
+          height: {
+            xs: "70vh",
+            sm: "90vh",
+          },
           marginTop: {
-            xs: 16,
-            md: 20,
+            xs: 22,
+            md: 28,
           },
           paddingX: {
             xs: 2,
             sm: 8,
-            md: 20,
+            md: 10,
           },
         }}
       >
         <Typography
           component={"p"}
           sx={{
-            fontSize: 12,
+            fontSize: 14,
             color: theme.palette.green.main,
             fontFamily: "Fira Code",
           }}
@@ -37,8 +40,8 @@ function Hero(props) {
           sx={{
             fontSize: {
               xs: 32,
-              sm: 42,
-              md: 48,
+              sm: 60,
+              md: 60,
             },
             fontWeight: "bold",
             color: theme.palette.slate[200],
@@ -52,26 +55,26 @@ function Hero(props) {
           sx={{
             fontSize: {
               xs: 32,
-              sm: 42,
-              md: 48,
+              sm: 60,
+              md: 60,
             },
             fontWeight: "bold",
             color: theme.palette.slate[400],
             mb: 2,
           }}
         >
-          I create things for the web.
+          I build things for the web.
         </Typography>
         <Typography
           variant="body2"
           sx={{
             fontSize: {
-              xs: 13,
-              sm: 14,
-              md: 14,
+              xs: 15,
+              sm: 18,
+              md: 18,
             },
             color: theme.palette.slate[400],
-            maxWidth: "460px",
+            maxWidth: "560px",
           }}
         >
           I’m a fullstack developer specializing in building (and occasionally
@@ -82,9 +85,9 @@ function Hero(props) {
         <AppButton
           sx={{
             fontSize: {
-              xs: 11,
-              sm: 11,
-              md: 12,
+              xs: 13,
+              sm: 14,
+              md: 14,
             },
             mt: 5,
             py: {
