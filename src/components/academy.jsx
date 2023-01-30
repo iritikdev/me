@@ -9,7 +9,7 @@ function Academy(props) {
       <Box
         sx={{
           height: {
-            xs: "700px",
+            xs: "750px",
             sm: "700px",
             md: "700px",
           },

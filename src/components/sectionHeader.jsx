@@ -6,7 +6,7 @@ function SectionHeader({ number, title }) {
   const theme = useTheme();
   return (
     <Box
-      sx={{ display: "inline-flex", alignItems: "center", pb: 4 }}
+      sx={{ display: "inline-flex", alignItems: "center", pb: 6 }}
       data-aos="fade-right"
     >
       <Typography

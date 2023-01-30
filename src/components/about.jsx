@@ -24,7 +24,7 @@ function About(props) {
       <Box
         sx={{
           height: {
-            xs: "900px",
+            xs: "950px",
             sm: "800px",
             md: "600px",
           },
