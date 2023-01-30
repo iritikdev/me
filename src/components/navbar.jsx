@@ -31,6 +31,7 @@ function HideOnScroll({ children, window }) {
 
 const navItems = ["About", "Academy", "Blog", "Contact"];
 const drawerWidth = 240;
+
 function Navbar(props) {
   const theme = useTheme();
 
@@ -57,8 +58,9 @@ function Navbar(props) {
             <img src={logo} alt="Ritik Sharma logo" width={54} />
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item, index) => (
+                // <Link to={`/#${item.toLowerCase()}`}>
                 <Button
-                  href={`#${item.toLowerCase()}`}
+                  href={`/#${item.toLowerCase()}`}
                   key={item}
                   sx={{
                     color: "#fff",
@@ -88,6 +90,7 @@ function Navbar(props) {
                     }}
                   >{` ${item}`}</Typography>
                 </Button>
+                // </Link>
               ))}
 
               <AppButton
@@ -152,7 +155,7 @@ function Navbar(props) {
                       }}
                     >
                       <Button
-                        href={`#${navItem.toLowerCase()}`}
+                        href={`/#${navItem.toLowerCase()}`}
                         key={navItem}
                         sx={{
                           textTransform: "none",

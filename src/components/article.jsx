@@ -46,13 +46,7 @@ function Article(props) {
       >
         <SectionHeader title={"Read my latest blog"} number={"04."} />
 
-        <Stack
-          direction={{ xs: "column", sm: "row" }}
-          gap={1.5}
-          data-aos="fade-up"
-          display={"flex"}
-          justifyContent="center"
-        >
+        <Box display="flex" flexWrap="wrap" gap={3} justifyContent="center">
           {articles.map((post, index) => (
             <>
               {index > 2 ? null : (
@@ -149,7 +143,7 @@ function Article(props) {
               )}
             </>
           ))}
-        </Stack>
+        </Box>
         <Box
           sx={{
             mt: 4,
