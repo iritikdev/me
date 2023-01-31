@@ -14,6 +14,7 @@ import { theme } from "./../theme";
 
 import { getPostsByUsername } from "../services/postService";
 import { AppButton } from "./../components/AppButton";
+import { Link } from "react-router-dom";
 
 function Blog(props) {
   const theme = useTheme();
@@ -91,36 +92,38 @@ function Blog(props) {
               },
             }}
           >
-            <CardMedia
-              sx={{ height: 150 }}
-              image={post.cover_image}
-              title="green iguana"
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="div"
-                fontSize={15}
-                fontWeight={600}
-                lineHeight={1.35}
-                color={theme.palette.slate[200]}
-                sx={{
-                  ":hover": {
-                    color: theme.palette.green.main,
-                  },
-                }}
-              >
-                {post.title}
-              </Typography>
-              <Typography
-                variant="body2"
-                fontSize={14}
-                color={theme.palette.slate[400]}
-              >
-                {post.description}
-              </Typography>
-            </CardContent>
+            <Link to={`/blog/${post.id}`}>
+              <CardMedia
+                sx={{ height: 150 }}
+                image={post.cover_image}
+                title="green iguana"
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="div"
+                  fontSize={15}
+                  fontWeight={600}
+                  lineHeight={1.35}
+                  color={theme.palette.slate[200]}
+                  sx={{
+                    ":hover": {
+                      color: theme.palette.green.main,
+                    },
+                  }}
+                >
+                  {post.title}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  fontSize={14}
+                  color={theme.palette.slate[400]}
+                >
+                  {post.description}
+                </Typography>
+              </CardContent>
+            </Link>
             <Box
               flex={1}
               sx={{
