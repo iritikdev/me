@@ -44,16 +44,12 @@ function ReadPost(props) {
     >
       <Container>
         <Card
+          elevation={false}
           sx={{
-            backgroundColor: theme.palette.blue[200],
+            backgroundColor: theme.palette.blue[800],
             color: theme.palette.slate[400],
           }}
         >
-          <CardMedia
-            sx={{ height: 350 }}
-            image={post?.cover_image}
-            title="green iguana"
-          />
           <CardContent>
             <Typography
               gutterBottom
@@ -67,9 +63,18 @@ function ReadPost(props) {
             >
               {post?.title}
             </Typography>
+            <CardMedia
+              sx={{
+                height: {
+                  xs: 200,
+                },
+              }}
+              image={post?.cover_image}
+              title="green iguana"
+            />
             <Box
               sx={{
-                backgroundColor: theme.palette.blue[400],
+                // backgroundColor: theme.palette.blue[400],
                 color: theme.palette.slate[400],
                 borderRadius: "4px",
                 mb: 2,
@@ -101,9 +106,9 @@ function ReadPost(props) {
                         >
                           Published: {post?.readable_publish_date}
                         </Typography>
-                        <Typography color={theme.palette.slate[400]}>
-                          {"I'll be in your neighborhood doing errands this…"}
-                        </Typography>
+                        <Typography
+                          color={theme.palette.slate[400]}
+                        ></Typography>
                       </React.Fragment>
                     }
                   />
