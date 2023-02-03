@@ -39,7 +39,8 @@ function ReadPost(props) {
     <Box
       sx={{
         fontFamily: "Inter",
-        my: 4,
+        mt: 8,
+        mb: 6,
       }}
     >
       <Container>
@@ -67,6 +68,7 @@ function ReadPost(props) {
               sx={{
                 height: {
                   xs: 200,
+                  sm: 350,
                 },
               }}
               image={post?.cover_image}
@@ -117,7 +119,9 @@ function ReadPost(props) {
             </Box>
             <Typography
               variant="body1"
-              sx={{ color: theme.palette.slate[400] }}
+              sx={{
+                color: theme.palette.slate[400],
+              }}
             >
               {Parser().parse(post?.body_html)}
             </Typography>

@@ -20,11 +20,11 @@ const router = createBrowserRouter([
         path: "blog",
         element: <Blog />,
       },
+      {
+        path: "blog/:id",
+        element: <ReadPost />,
+      },
     ],
-  },
-  {
-    path: "blog/:id",
-    element: <ReadPost />,
   },
 ]);
 
