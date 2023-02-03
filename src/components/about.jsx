@@ -19,10 +19,10 @@ import { TbBrandPython } from "react-icons/tb";
 import { theme } from "../theme";
 
 const about = [
-  "Hello! My name is Ritik and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!",
-  "Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.",
-  "I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.",
-  "Here are a few technologies I've been working with recently:",
+  "Hello! My name is Ritik and I love to create things that live on the internet. My interest in web development started back in 2018 when I was in 2nd year of my diploma.",
+  "In my free time, I enjoy building stuff that live on internet. I believe in continuously learning and expanding my knowledge base to stay ahead in the field. ",
+  "I am always looking for new opportunities to challenge myself and make a positive impact. Please feel free to explore my website to learn more about my work and connect with me.",
+  "I have honed my skills and developed a strong understanding of following technology: ",
 ];
 
 const stack = [
@@ -130,7 +130,7 @@ function About(props) {
                   <Typography
                     sx={{
                       textTransform: "none",
-                      fontSize: 13,
+                      fontSize: { xs: 12, sm: 12.5 },
                       fontWeight: "300",
                       fontFamily: "Fira Code",
                     }}
