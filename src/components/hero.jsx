@@ -1,17 +1,30 @@
 import { Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useRef } from "react";
 import { AppButton } from "./AppButton";
 
 function Hero(props) {
   const theme = useTheme();
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  console.log(windowSize.current);
+  console.log("====================================");
+  console.log(windowSize[0], windowSize[1]);
+  console.log("====================================");
+  console.log(windowSize.current[0] > 900 && windowSize.current[1] > 400);
   return (
     <div id="" data-aos="fade-up">
       <Box
         sx={{
           height: {
-            xs: "70vh",
-            sm: "90vh",
+            xs: "70dvh",
+            sm: "80dvh",
+            md: "90dvh",
+          },
+          mb: {
+            sm:
+              windowSize.current[0] > 900 && windowSize.current[1] > 400
+                ? 30
+                : 0,
           },
           marginTop: {
             xs: 22,
