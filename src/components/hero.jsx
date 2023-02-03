@@ -5,12 +5,23 @@ import { AppButton } from "./AppButton";
 
 function Hero(props) {
   const theme = useTheme();
-  const windowSize = useRef([window.innerWidth, window.innerHeight]);
-  console.log(windowSize.current);
-  console.log("====================================");
-  console.log(windowSize[0], windowSize[1]);
-  console.log("====================================");
-  console.log(windowSize.current[0] > 900 && windowSize.current[1] > 400);
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  });
+
   return (
     <div id="" data-aos="fade-up">
       <Box
@@ -21,10 +32,7 @@ function Hero(props) {
             md: "90dvh",
           },
           mb: {
-            sm:
-              windowSize.current[0] > 900 && windowSize.current[1] > 400
-                ? 30
-                : 0,
+            sm: windowSize[0] > 900 && windowSize[1] > 300 ? 30 : 0,
           },
           marginTop: {
             xs: 22,
