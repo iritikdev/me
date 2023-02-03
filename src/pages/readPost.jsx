@@ -37,7 +37,14 @@ function ReadPost(props) {
 
   if (post === undefined || post === null) {
     return (
-      <Box display={"flex"} justifyContent="center" mt={8} mb={6}>
+      <Box
+        flex={1}
+        display={"flex"}
+        justifyContent="center"
+        mt={8}
+        mb={6}
+        data-aos="fade-up"
+      >
         {!post && (
           <Rings
             height="80"
@@ -56,6 +63,7 @@ function ReadPost(props) {
 
   return (
     <Box
+      data-aos="fade-up"
       sx={{
         fontFamily: "Inter",
         mt: 8,
@@ -64,10 +72,11 @@ function ReadPost(props) {
     >
       <Container>
         <Card
-          elevation={false}
+          key={post?.id}
           sx={{
             backgroundColor: theme.palette.blue[800],
             color: theme.palette.slate[400],
+            boxShadow: theme.shadows[0],
           }}
         >
           <CardContent>
@@ -101,8 +110,8 @@ function ReadPost(props) {
                 mb: 2,
               }}
             >
-              <List key={post?.id}>
-                <ListItem alignItems="flex-start">
+              <List>
+                <ListItem alignItems="flex-start" key={post?.id}>
                   <ListItemAvatar>
                     <Avatar
                       alt={post?.user.name}
