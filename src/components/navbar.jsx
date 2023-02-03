@@ -1,24 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import {
   AppBar,
   Box,
   Button,
-  Container,
   Toolbar,
   useScrollTrigger,
   useTheme,
   Typography,
   Slide,
   ListItem,
-  ListItemButton,
-  ListItemText,
   List,
   Drawer,
 } from "@mui/material";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AppButton } from "./AppButton";
 import { logo, resume } from "../assets/index";
+import { styled } from "@mui/system";
 
 function HideOnScroll({ children, window }) {
   const trigger = useScrollTrigger({ target: window });
@@ -28,6 +26,13 @@ function HideOnScroll({ children, window }) {
     </Slide>
   );
 }
+
+const Image = styled("img")(({ theme }) => ({
+  width: 42,
+  [theme.breakpoints.up("sm")]: {
+    width: 50,
+  },
+}));
 
 const navItems = ["About", "Academy", "Blog", "Contact"];
 const drawerWidth = 240;
@@ -55,7 +60,7 @@ function Navbar(props) {
           }}
         >
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <img src={logo} alt="Ritik Sharma logo" width={54} />
+            <Image src={logo} alt="Ritik Sharma logo" />
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item, index) => (
                 // <Link to={`/#${item.toLowerCase()}`}>

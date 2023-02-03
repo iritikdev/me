@@ -63,7 +63,6 @@ function ReadPost(props) {
 
   return (
     <Box
-      data-aos="fade-up"
       sx={{
         fontFamily: "Inter",
         mt: 8,
@@ -95,7 +94,7 @@ function ReadPost(props) {
             <CardMedia
               sx={{
                 height: {
-                  xs: 200,
+                  xs: 250,
                   sm: 350,
                 },
               }}
