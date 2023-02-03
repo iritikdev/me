@@ -94,7 +94,7 @@ function ReadPost(props) {
             <CardMedia
               sx={{
                 height: {
-                  xs: 250,
+                  xs: 160,
                   sm: 350,
                 },
               }}
