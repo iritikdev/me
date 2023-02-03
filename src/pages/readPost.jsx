@@ -19,8 +19,8 @@ import { AppButton } from "../components/AppButton";
 import { getPostById } from "../services/postService";
 import { theme } from "../theme";
 import { Parser } from "html-to-react";
-
-const post = [];
+import { Rings } from "react-loader-spinner";
+import Contact from "./../components/contact";
 
 function ReadPost(props) {
   const params = useParams();
@@ -34,6 +34,25 @@ function ReadPost(props) {
   useEffect(() => {
     populatePost();
   }, []);
+
+  if (post === undefined || post === null) {
+    return (
+      <Box display={"flex"} justifyContent="center" mt={8} mb={6}>
+        {!post && (
+          <Rings
+            height="80"
+            width="80"
+            color={theme.palette.green.main}
+            radius="6"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+            ariaLabel="rings-loading"
+          />
+        )}
+      </Box>
+    );
+  }
 
   return (
     <Box
