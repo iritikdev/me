@@ -1,6 +1,6 @@
 import { Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { AppButton } from "./AppButton";
 
 function Hero(props) {
