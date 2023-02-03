@@ -82,6 +82,10 @@ function Hero(props) {
             fontWeight: "bold",
             color: theme.palette.slate[400],
             mb: 2,
+            background:
+              "radial-gradient(64.18% 64.18% at 71.16% 35.69%,#def9fa .89%,#bef3f5 17.23%,#9dedf0 42.04%,#7de7eb 55.12%,#5ce1e6 71.54%,#64ffda 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
           }}
         >
           I build things for the web.
