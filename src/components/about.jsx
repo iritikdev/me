@@ -5,10 +5,18 @@ import {
   Typography,
   useTheme,
   styled,
+  List,
+  ListItem,
+  ListItemText,
+  Button,
 } from "@mui/material";
 import React from "react";
-import { ritik, ritiksm } from "../assets";
+import { ritiksm } from "../assets";
 import SectionHeader from "./sectionHeader";
+import { DiJavascript1, DiReact, DiPython } from "react-icons/di";
+import { SiNodedotjs, SiExpress, SiExpo } from "react-icons/si";
+import { TbBrandPython } from "react-icons/tb";
+import { theme } from "../theme";
 
 const about = [
   "Hello! My name is Ritik and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!",
@@ -17,6 +25,46 @@ const about = [
   "Here are a few technologies I've been working with recently:",
 ];
 
+const stack = [
+  {
+    id: 1,
+    name: "JavaScript(ES6+)",
+    icon: <DiJavascript1 color={theme.palette.green.main} size={16} />,
+    color: "#fcdc00",
+  },
+
+  {
+    id: 4,
+    name: "Node.js/Express",
+    icon: <SiNodedotjs color={theme.palette.green.main} size={14} />,
+    color: "#026e00",
+  },
+  {
+    id: 2,
+    name: "React",
+    icon: <DiReact color={theme.palette.green.main} size={16} />,
+    color: "#61dafb",
+  },
+
+  {
+    id: 5,
+    name: "Python/Django",
+    icon: <TbBrandPython color={theme.palette.green.main} size={16} />,
+    color: "#259dff",
+  },
+  {
+    id: 6,
+    name: "Wordpress",
+    icon: <SiExpress color={theme.palette.green.main} size={14} />,
+    color: "#259dff",
+  },
+  {
+    id: 6,
+    name: "React Native",
+    icon: <SiExpo color={theme.palette.green.main} size={14} />,
+    color: "#259dff",
+  },
+];
 function About(props) {
   const theme = useTheme();
   return (
@@ -24,9 +72,9 @@ function About(props) {
       <Box
         sx={{
           height: {
-            xs: "950px",
+            xs: "1000px",
             sm: "800px",
-            md: "600px",
+            md: "700px",
           },
           px: {
             xs: 2.5,
@@ -55,6 +103,43 @@ function About(props) {
                 </Typography>
               );
             })}
+            <Box
+              display={"inline-grid"}
+              columnGap={{
+                xs: 5,
+                sm: 10,
+              }}
+              gridTemplateColumns={"repeat(2,1fr)"}
+              gridTemplateRows={"repeat(3,1fr)"}
+            >
+              {stack.map((item) => (
+                <Button
+                  key={item.id}
+                  startIcon={item.icon}
+                  sx={{
+                    color: theme.palette.slate[400],
+                    py: 0.2,
+                    display: "flex",
+                    justifyContent: "flex-start",
+
+                    "&:hover": {
+                      color: theme.palette.slate[200],
+                    },
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      textTransform: "none",
+                      fontSize: 13,
+                      fontWeight: "300",
+                      fontFamily: "Fira Code",
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
+                </Button>
+              ))}
+            </Box>
           </Box>
           <Box
             flex={5}
