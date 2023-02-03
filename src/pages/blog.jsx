@@ -29,20 +29,6 @@ function Blog(props) {
     populatePost();
   }, []);
 
-  // if (true)
-  //   return (
-  //     <Box height={"100vh"} bgcolor="gold">
-  //       <Dna
-  //         visible={true}
-  //         height="80"
-  //         width="80"
-  //         ariaLabel="dna-loading"
-  //         wrapperStyle={{}}
-  //         wrapperClass="dna-wrapper"
-  //       />
-  //     </Box>
-  //   );
-
   return (
     <Box
       pb={4}

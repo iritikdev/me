@@ -75,7 +75,7 @@ function ReadPost(props) {
                 mb: 2,
               }}
             >
-              <List sx={{}}>
+              <List key={post?.id}>
                 <ListItem alignItems="flex-start">
                   <ListItemAvatar>
                     <Avatar

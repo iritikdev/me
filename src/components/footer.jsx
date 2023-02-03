@@ -54,7 +54,7 @@ function Footer(props) {
             textAlign: "center",
             cursor: "pointer",
             pb: 1,
-            fontSize: 11,
+            fontSize: 12,
             fontWeight: "300",
             fontFamily: "Fira Code",
             color: theme.palette.slate[200],
@@ -63,8 +63,17 @@ function Footer(props) {
             },
           }}
         >
-          Design adapted from Brittany Chiang & Built by{" "}
-          <span style={{ fontWeight: "bold" }}>#me</span>
+          Design adapted from Brittany & Built by&nbsp;
+          <Typography
+            component={"span"}
+            sx={{
+              fontSize: 12,
+              fontFamily: "Inter",
+              fontWeight: "600",
+            }}
+          >
+            @me
+          </Typography>
         </Typography>
 
         <Box

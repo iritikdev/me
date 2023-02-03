@@ -14,6 +14,7 @@ import SectionHeader from "./sectionHeader";
 import { AppButton } from "./AppButton";
 import { getPostsByUsername } from "../services/postService";
 import { Link } from "react-router-dom";
+import { Rings } from "react-loader-spinner";
 
 // const animate = ["fade-right", "fade-up", "fade-left"];
 
@@ -32,10 +33,15 @@ function Article(props) {
     <div id="blog">
       <Box
         sx={{
-          height: {
-            xs: "1200px",
-            sm: "800px",
-            md: "600px",
+          // height: {
+          //   xs: "1300px",
+          //   sm: "1000px",
+          //   md: "1000px",
+          // },
+          mb: {
+            xs: 20,
+            sm: 20,
+            md: 20,
           },
           px: {
             xs: 2,
@@ -47,6 +53,18 @@ function Article(props) {
         <SectionHeader title={"Read my latest blog"} number={"04."} />
 
         <Box display="flex" flexWrap="wrap" gap={3} justifyContent="center">
+          {articles.length === 0 && (
+            <Rings
+              height="80"
+              width="80"
+              color={theme.palette.green.main}
+              radius="6"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+              ariaLabel="rings-loading"
+            />
+          )}
           {articles.map((post, index) => (
             <>
               {index > 2 ? null : (
