@@ -144,14 +144,10 @@ function ReadPost(props) {
                 </ListItem>
               </List>
             </Box>
-            <Typography
-              variant="body1"
-              sx={{
-                color: theme.palette.slate[400],
-              }}
-            >
-              {Parser().parse(post?.body_html)}
-            </Typography>
+            <div
+              className="content"
+              dangerouslySetInnerHTML={{ __html: post?.body_html }}
+            ></div>
           </CardContent>
           <CardActions>
             {post?.tags.map((item, index) => (

@@ -81,3 +81,34 @@ a {
 .js-fullscreen-code-action {
   display: none !important;
 }
+
+/* blog post styling */
+.content {
+  font-size: 16px !important;
+}
+
+.content>h3 {
+  margin: 10px 0px;
+}
+
+.content>p,
+.content>ul {
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.content>ul {
+
+  margin-left: 2rem;
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+}
+
+.highlight {
+  background-color: var(--navy-50);
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+}
