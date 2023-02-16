@@ -112,7 +112,7 @@ a {
   padding: 0.6rem 0.5rem;
   border-radius: 5px;
   margin-bottom: 0.8rem;
-  overflow-x: scroll;
+  overflow-x: auto;
   font-size: 13px;
 }
 
