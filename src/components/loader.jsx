@@ -1,37 +1,47 @@
+import { Button } from "@mui/material";
 import React from "react";
-import style from "./loader.module.css";
-function Loader(props) {
+function Loader({ isLoading }) {
+  console.log("🚀 ~ file: loader.jsx:4 ~ Loader ~ isLoading", isLoading);
+  let classes = "";
+
+  classes += isLoading === false ? "active" : "";
   return (
     <div>
       <svg
-        width="80"
-        height="85"
-        viewBox="0 0 363 372"
+        className={classes}
+        width="120"
+        height="125"
+        viewBox="0 0 389 388"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M211.034 23.284L305.218 79.0091C322.861 89.4482 333.684 108.426 333.684 128.926V243.074C333.684 263.574 322.861 282.552 305.218 292.991L211.034 348.716C192.819 359.493 170.181 359.493 151.966 348.716L57.7822 292.991C40.1386 282.552 29.3164 263.574 29.3164 243.074V128.926C29.3164 108.426 40.1386 89.4482 57.7821 79.0091L151.966 23.284C170.181 12.507 192.819 12.5069 211.034 23.284Z"
+          d="M223.444 22.4377L328.886 83.1581C346.863 93.5103 357.942 112.675 357.942 133.42V254.58C357.942 275.325 346.863 294.49 328.886 304.842L223.444 365.562C205.527 375.88 183.473 375.88 165.556 365.562L60.114 304.842C42.1372 294.49 31.0581 275.325 31.0581 254.58V133.42C31.0581 112.675 42.1372 93.5103 60.114 83.1581L165.556 22.4377C183.473 12.12 205.527 12.12 223.444 22.4377Z"
           stroke="#64FFDA"
-          strokeWidth="10"
-          className="svg-elem-1"
+          stroke-width="8"
+          class="svg-elem-1"
         ></path>
         <path
-          d="M186 62.8267L67 102.827L102 141.827L53 257.827L88 293.827L186 62.8267Z"
+          d="M203 72.5748L84 112.992L119 152.398L70 269.606L105 305.981L203 72.5748Z"
           fill="#64FFDA"
-          className="svg-elem-2"
+          stroke="#64FFDA"
+          class="svg-elem-2"
         ></path>
         <path
-          d="M311.027 108.97L189.4 65.2566L171.83 105.905L216.512 124.332L151.647 185.672L194.649 213.163L311.027 108.97Z"
+          d="M331.027 119.199L209.4 75.0301L191.83 116.102L236.512 134.721L171.647 196.699L214.649 224.478L331.027 119.199Z"
           fill="#64FFDA"
-          className="svg-elem-3"
+          stroke="#64FFDA"
+          class="svg-elem-3"
         ></path>
         <path
-          d="M274 283.827L144 188.827L129 236.827L193 288.827L274 283.827Z"
+          d="M295 298.877L165 202.887L150 251.387L214 303.929L295 298.877Z"
           fill="white"
-          className="svg-elem-4"
+          stroke="white"
+          class="svg-elem-4"
         ></path>
       </svg>
+
+      {/* <Button onClick={() => setLoading(!loading)}>draw</Button> */}
     </div>
   );
 }

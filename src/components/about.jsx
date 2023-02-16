@@ -1,19 +1,15 @@
 import {
   Box,
-  Divider,
   Stack,
   Typography,
   useTheme,
   styled,
-  List,
-  ListItem,
-  ListItemText,
   Button,
 } from "@mui/material";
 import React from "react";
 import { ritiksm } from "../assets";
 import SectionHeader from "./sectionHeader";
-import { DiJavascript1, DiReact, DiPython } from "react-icons/di";
+import { DiJavascript1, DiReact } from "react-icons/di";
 import { SiNodedotjs, SiExpress, SiExpo } from "react-icons/si";
 import { TbBrandPython } from "react-icons/tb";
 import { theme } from "../theme";
