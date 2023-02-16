@@ -91,7 +91,7 @@ function Article(props) {
                 >
                   <Link to={`/blog/${post.id}`}>
                     <CardMedia
-                      sx={{ height: 150 }}
+                      sx={{ height: 160 }}
                       image={post.cover_image}
                       title="green iguana"
                     />
