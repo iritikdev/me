@@ -24,18 +24,18 @@ export const stack = [
     icon: <SiMaterialui color={theme.palette.blue[800]} size={14} />,
     color: "#007fff",
   },
-  {
-    id: 4,
-    name: "Node",
-    icon: <SiNodedotjs color={theme.palette.blue[800]} size={14} />,
-    color: "#026e00",
-  },
-  {
-    id: 5,
-    name: "Express",
-    icon: <SiExpress color={theme.palette.blue[800]} size={14} />,
-    color: "#259dff",
-  },
+  // {
+  //   id: 4,
+  //   name: "Node",
+  //   icon: <SiNodedotjs color={theme.palette.blue[800]} size={14} />,
+  //   color: "#026e00",
+  // },
+  // {
+  //   id: 5,
+  //   name: "Express",
+  //   icon: <SiExpress color={theme.palette.blue[800]} size={14} />,
+  //   color: "#259dff",
+  // },
 ];
 
 function Footer(props) {
