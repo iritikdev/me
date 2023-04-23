@@ -1,20 +1,26 @@
 import {
-  Box,
   Button,
   Card,
   CardActions,
   CardContent,
   CardMedia,
-  SvgIcon,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
-import { externalIcon, folderIcon, githubIcon } from "../assets";
+import { externalIcon, githubIcon } from "../assets";
 import { theme } from "./../theme";
 
-function ProjectCard({ title, subTitle, tags, url, githubUrl, project_image }) {
+function ProjectCard({
+  id,
+  title,
+  subTitle,
+  tags,
+  url,
+  githubUrl,
+  project_image,
+}) {
   return (
     <Card
+      key={id}
       sx={{
         position: "relative",
         width: 275,

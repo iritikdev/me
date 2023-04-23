@@ -31,8 +31,9 @@ function Projects(props) {
           justifyContent={"center"}
           gap={2}
         >
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <ProjectCard
+              id={index}
               title={project.title}
               subTitle={project.description}
               githubUrl={project.github_url}
