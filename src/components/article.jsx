@@ -90,11 +90,7 @@ function Article(props) {
                   }}
                 >
                   <Link to={`/blog/${post.id}`}>
-                    <CardMedia
-                      sx={{ height: 160 }}
-                      image={post.cover_image}
-                      title="green iguana"
-                    />
+                    <CardMedia sx={{ height: 140 }} image={post.cover_image} />
                     <CardContent>
                       <Typography
                         gutterBottom
@@ -139,6 +135,7 @@ function Article(props) {
                                 py: 0.1,
                                 px: 0.4,
                                 color: theme.palette.slate[200],
+                                border: "none",
                                 textTransform: "none",
                                 "&:hover": {
                                   color: theme.palette.slate[200],

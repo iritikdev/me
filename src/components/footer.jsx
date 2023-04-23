@@ -1,56 +1,32 @@
 import React from "react";
-import { Box, Button, Typography, useTheme } from "@mui/material";
-import { DiJavascript1, DiReact } from "react-icons/di";
-import { SiMaterialui, SiNodedotjs, SiExpress } from "react-icons/si";
+import { Box, Tooltip, Typography } from "@mui/material";
 
 import { theme } from "../theme";
-
-export const stack = [
-  {
-    id: 1,
-    name: "JavaScript",
-    icon: <DiJavascript1 color={theme.palette.blue[800]} size={16} />,
-    color: "#fcdc00",
-  },
-  {
-    id: 2,
-    name: "React",
-    icon: <DiReact color={theme.palette.blue[800]} size={16} />,
-    color: "#61dafb",
-  },
-  {
-    id: 3,
-    name: "mui",
-    icon: <SiMaterialui color={theme.palette.blue[800]} size={14} />,
-    color: "#007fff",
-  },
-  // {
-  //   id: 4,
-  //   name: "Node",
-  //   icon: <SiNodedotjs color={theme.palette.blue[800]} size={14} />,
-  //   color: "#026e00",
-  // },
-  // {
-  //   id: 5,
-  //   name: "Express",
-  //   icon: <SiExpress color={theme.palette.blue[800]} size={14} />,
-  //   color: "#259dff",
-  // },
-];
+import { bc, githubIcon, hackertankIcon, linkedInIcon } from "../assets";
+import { SiFrontendmentor, SiGeeksforgeeks } from "react-icons/si";
 
 function Footer(props) {
   return (
     <Box
       sx={{
-        height: 100,
+        height: 70,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        flexDirection: "column",
+        rowGap: 1.1,
+        mb: {
+          xs: 3,
+          md: 0,
+          lg: 0,
+        },
       }}
     >
       <Box>
         <Typography
           sx={{
+            display: "inline-flex",
+            alignItems: "center",
             textAlign: "center",
             cursor: "pointer",
             pb: 1,
@@ -63,7 +39,8 @@ function Footer(props) {
             },
           }}
         >
-          Design adapted from Brittany & Built by&nbsp;
+          Build by Ritik Sharma & Design adapted from&nbsp;
+          <img src={bc} alt="Brittany Chang" srcset="" width={18} />
           <Typography
             component={"span"}
             sx={{
@@ -71,58 +48,44 @@ function Footer(props) {
               fontFamily: "Inter",
               fontWeight: "600",
             }}
-          >
-            @me
-          </Typography>
+          ></Typography>
         </Typography>
+      </Box>
 
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            sx={{
-              width: {
-                md: "auto",
-                xs: 250,
-              },
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 1,
-              justifyContent: "center",
-            }}
-          >
-            {stack.map((item) => (
-              <Button
-                key={item.id}
-                startIcon={item.icon}
-                sx={{
-                  backgroundColor: item.color,
-                  py: 0.2,
+      <Box
+        className="social-icons"
+        sx={{
+          display: {
+            xs: "flex",
+            sm: "none",
+            md: "none",
+            lg: "none",
+          },
+          columnGap: 2,
+        }}
+      >
+        <Tooltip title="github/iritikdev" placement="right">
+          <a href="#" className="hrx-link">
+            <img src={githubIcon} width={22} />
+          </a>
+        </Tooltip>
+        <Tooltip title="linkedlin/iritikdev" placement="right">
+          <a href="#">
+            <img src={linkedInIcon} width={22} />
+          </a>
+        </Tooltip>
+        <Tooltip title="Frontend Mentor" placement="right">
+          <a href="#">
+            <SiFrontendmentor size={22} color="#ccd6f6" strokeWidth={1} />
+          </a>
+        </Tooltip>
+        <a href="#">
+          <SiGeeksforgeeks size={24} color="#ccd6f6" />
+        </a>
 
-                  "&:hover": {
-                    color: theme.palette.blue[800],
-                    backgroundColor: item.color,
-                  },
-                }}
-              >
-                <Typography
-                  sx={{
-                    textTransform: "none",
-                    fontSize: 10,
-                    fontWeight: "300",
-                    fontFamily: "Fira Code",
-                    color: theme.palette.blue[800],
-                  }}
-                >
-                  {item.name}
-                </Typography>
-              </Button>
-            ))}
-          </Box>
-        </Box>
+        <a href="#">
+          <img src={hackertankIcon} width={24} />
+        </a>
       </Box>
     </Box>
   );

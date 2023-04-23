@@ -95,8 +95,8 @@ function Hero(props) {
           sx={{
             fontSize: {
               xs: 15,
-              sm: 18,
-              md: 18,
+              sm: 17,
+              md: 17,
             },
             color: theme.palette.slate[400],
             maxWidth: "560px",
@@ -108,6 +108,7 @@ function Hero(props) {
         </Typography>
 
         <AppButton
+          href="http://www.github.com/iritikdev"
           sx={{
             fontSize: {
               xs: 13,

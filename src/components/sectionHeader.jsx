@@ -32,6 +32,7 @@ function SectionHeader({ number, title }) {
             md: 22,
           },
           fontWeight: "bold",
+          letterSpacing: 1.2,
           color: theme.palette.slate[200],
         }}
       >

@@ -4,9 +4,11 @@ import React from "react";
 import About from "../components/about";
 import Academy from "../components/academy";
 import Hero from "../components/hero";
-import Project from "../components/project";
+import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Article from "../components/article";
+import EmailSideBar from "./../components/emailSideBar";
+import SocialSideBar from "../components/socialSidebar";
 
 function Home(props) {
   return (
@@ -15,7 +17,9 @@ function Home(props) {
         <Hero />
         <About />
         <Academy />
-        {/* <Project /> */}
+        <EmailSideBar />
+        <SocialSideBar />
+        <Projects />
         <Article />
         <Contact />
       </Container>

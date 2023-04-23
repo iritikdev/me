@@ -187,3 +187,30 @@ a {
     fill: white;
   }
 }
+
+/* Link */
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link {
+  display: inline-block;
+  color: var(--color-accent);
+  transition: border-bottom 0.5s;
+  line-height: normal;
+}
+
+
+.link::after {
+  transition: all ease-in-out .3s;
+  background: none repeat scroll 0 0 var(--color-accent);
+  content: "";
+  display: block;
+  height: 0.5px;
+  width: 0;
+}
+
+.link:hover::after {
+  width: 100%;
+}

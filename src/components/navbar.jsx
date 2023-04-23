@@ -57,6 +57,10 @@ function Navbar(props) {
               xs: 0.3,
               sm: 2,
             },
+            py: {
+              xs: 0.3,
+              sm: 0.75,
+            },
           }}
         >
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
