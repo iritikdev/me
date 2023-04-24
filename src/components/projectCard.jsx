@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { externalIcon } from "../assets";
 import { theme } from "./../theme";
+import { FiGithub } from "react-icons/fi";
 
 function ProjectCard({
   id,
@@ -50,7 +51,7 @@ function ProjectCard({
         }}
       >
         <a href={githubUrl} target="_blank">
-          <SiGithub size={22} color="#ccd6f6" strokeWidth={1} />
+          <FiGithub size={16} color="#ccd6f6" strokeWidth={2} />
         </a>
         <a href={url} target="_blank">
           <img src={externalIcon} alt="" width={16} />

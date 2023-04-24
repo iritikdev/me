@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Tooltip } from "@mui/material";
 import { SiFrontendmentor, SiGeeksforgeeks, SiGithub } from "react-icons/si";
 import { hackertankIcon, linkedInIcon } from "../assets";
+import { FiAirplay, FiGithub } from "react-icons/fi";
 
 function SocialSideBar(props) {
   return (
@@ -31,7 +32,7 @@ function SocialSideBar(props) {
         >
           <Tooltip title="github/iritikdev" placement="right">
             <a href="#" className="hrx-link">
-              <SiGithub size={22} color="#ccd6f6" strokeWidth={1} />
+              <FiGithub size={24} color="#aab5d3" strokeWidth={2} />
             </a>
           </Tooltip>
           <Tooltip title="linkedlin/iritikdev" placement="right">
@@ -41,11 +42,11 @@ function SocialSideBar(props) {
           </Tooltip>
           <Tooltip title="Frontend Mentor" placement="right">
             <a href="#">
-              <SiFrontendmentor size={22} color="#ccd6f6" strokeWidth={1} />
+              <FiAirplay size={22} color="#aab5d3" strokeWidth={2} />
             </a>
           </Tooltip>
           <a href="#">
-            <SiGeeksforgeeks size={24} color="#ccd6f6" />
+            <SiGeeksforgeeks size={24} color="#aab5d3" />
           </a>
 
           <a href="#">
