@@ -2,7 +2,8 @@ import React from "react";
 import { Box, Tooltip, Typography } from "@mui/material";
 
 import { theme } from "../theme";
-import { bc, githubIcon, hackertankIcon, linkedInIcon } from "../assets";
+import { bc, hackertankIcon, linkedInIcon } from "../assets";
+import githubIcon from "../assets/github.svg";
 import { SiFrontendmentor, SiGeeksforgeeks } from "react-icons/si";
 
 function Footer(props) {

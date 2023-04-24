@@ -4,7 +4,7 @@ import SectionHeader from "./sectionHeader";
 import ProjectCard from "./projectCard";
 import { useState } from "react";
 
-import { projectsDetails } from "../assets/data";
+import { projectsDetails } from "../assets/projects";
 
 function Projects(props) {
   const [projects, setProjects] = useState(projectsDetails);
