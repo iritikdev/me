@@ -6,7 +6,8 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import { externalIcon, githubIcon } from "../assets";
+import { externalIcon } from "../assets";
+import githubIcon from "../assets/github.svg";
 import { theme } from "./../theme";
 
 function ProjectCard({
