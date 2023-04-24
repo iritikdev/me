@@ -3,8 +3,7 @@ import { Box, Tooltip, Typography } from "@mui/material";
 
 import { theme } from "../theme";
 import { bc, hackertankIcon, linkedInIcon } from "../assets";
-import githubIcon from "../assets/github.svg";
-import { SiFrontendmentor, SiGeeksforgeeks } from "react-icons/si";
+import { SiFrontendmentor, SiGeeksforgeeks, SiGithub } from "react-icons/si";
 
 function Footer(props) {
   return (
@@ -67,7 +66,7 @@ function Footer(props) {
       >
         <Tooltip title="github/iritikdev" placement="right">
           <a href="#" className="hrx-link">
-            <img src={githubIcon} width={22} />
+            <SiGithub size={22} color="#ccd6f6" strokeWidth={1} />
           </a>
         </Tooltip>
         <Tooltip title="linkedlin/iritikdev" placement="right">

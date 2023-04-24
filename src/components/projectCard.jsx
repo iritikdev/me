@@ -7,7 +7,6 @@ import {
   Typography,
 } from "@mui/material";
 import { externalIcon } from "../assets";
-import githubIcon from "../assets/github.svg";
 import { theme } from "./../theme";
 
 function ProjectCard({
@@ -51,7 +50,7 @@ function ProjectCard({
         }}
       >
         <a href={githubUrl} target="_blank">
-          <img src={githubIcon} alt="" width={16} style={{ marginRight: 8 }} />
+          <SiGithub size={22} color="#ccd6f6" strokeWidth={1} />
         </a>
         <a href={url} target="_blank">
           <img src={externalIcon} alt="" width={16} />
