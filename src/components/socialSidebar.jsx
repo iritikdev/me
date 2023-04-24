@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Tooltip } from "@mui/material";
 import { SiFrontendmentor, SiGeeksforgeeks } from "react-icons/si";
-import { hackertankIcon, linkedInIcon } from "../assets";
+import { githubIcon, hackertankIcon, linkedInIcon } from "../assets";
 
-import githubIcon from "../assets/Github.svg";
+// import githubIcon from "../assets/Github.svg";
 // import githubIcon from '../assets/'
 // import githubIcon from '../assets/Github.svg'
 

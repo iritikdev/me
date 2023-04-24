@@ -18,7 +18,7 @@ function Home(props) {
         <About />
         <Academy />
         <EmailSideBar />
-        <SocialSideBar />
+        {/* <SocialSideBar /> */}
         <Projects />
         <Article />
         <Contact />
