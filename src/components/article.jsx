@@ -72,7 +72,7 @@ function Article(props) {
                   key={index}
                   sx={{
                     width: {
-                      xs: 350,
+                      xs: 320,
                       sm: 275,
                     },
                     cursor: "pointer",
