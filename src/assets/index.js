@@ -6,6 +6,7 @@ import folderIcon from "./Folder.svg";
 import externalIcon from "./external.svg";
 import linkedInIcon from "./LinkedIn.svg";
 import hackertankIcon from "./hackerrank.svg";
+import profileRitik from "./ritik.png";
 
 import resume from "./Ritik_Kumar_Resume.pdf";
 export {
@@ -18,4 +19,5 @@ export {
   externalIcon,
   linkedInIcon,
   hackertankIcon,
+  profileRitik,
 };

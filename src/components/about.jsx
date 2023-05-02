@@ -7,7 +7,7 @@ import {
   Button,
 } from "@mui/material";
 import React from "react";
-import { ritiksm } from "../assets";
+import { profileRitik, ritik, ritiksm } from "../assets";
 import SectionHeader from "./sectionHeader";
 import { DiJavascript1, DiReact } from "react-icons/di";
 import { SiNodedotjs, SiExpress, SiExpo } from "react-icons/si";
@@ -152,7 +152,11 @@ function About(props) {
               justifyContent: "center",
             }}
           >
-            <Profile src={ritiksm} alt="Ritik Sharma" data-aos="zoom-in-up" />
+            <Profile
+              src={profileRitik}
+              alt="Ritik Sharma"
+              data-aos="zoom-in-up"
+            />
           </Box>
         </Stack>
       </Box>
