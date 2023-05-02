@@ -62,7 +62,7 @@ export const projectsDetails = [
   },
   {
     id: 3,
-    title: "IP Address Tracker",
+    title: "Frontend Mentor - IP Address Tracker",
     description:
       "Developed a ToDo application using React, which allows users to create and manage tasks with ease. The app includes features such as adding, deleting, and updating tasks, setting due dates and reminders, and filtering tasks based on their status.",
     tech_stack: ["JavaScript", "React", "API"],
@@ -70,38 +70,5 @@ export const projectsDetails = [
     live_url: "https://age-calculator-hrx.netlify.app",
     project_image:
       "https://github.com/iritikdev/ip-address-tracker/blob/master/design/desktop-design.jpg?raw=true",
-  },
-  {
-    id: 4,
-    title: "Frontend Mentor - Todo app",
-    description:
-      "Developed a ToDo application using React, which allows users to create and manage tasks with ease. The app includes features such as adding, deleting, and updating tasks, setting due dates and reminders, and filtering tasks based on their status.",
-    tech_stack: ["JavaScript", "React", "API"],
-    github_url: "https://github.com/iritikdev/todoist",
-    live_url: "https://age-calculator-hrx.netlify.app",
-    project_image:
-      "https://github.com/iamkk25/frontend-mentor-todo-app/raw/main/design/desktop-preview.jpg",
-  },
-  {
-    id: 5,
-    title: "Frontend Mentor - Todo app",
-    description:
-      "Developed a ToDo application using React, which allows users to create and manage tasks with ease. The app includes features such as adding, deleting, and updating tasks, setting due dates and reminders, and filtering tasks based on their status.",
-    tech_stack: ["JavaScript", "React", "API"],
-    github_url: "https://github.com/iritikdev/todoist",
-    live_url: "https://age-calculator-hrx.netlify.app",
-    project_image:
-      "https://github.com/iamkk25/frontend-mentor-todo-app/raw/main/design/desktop-preview.jpg",
-  },
-  {
-    id: 6,
-    title: "Frontend Mentor - Todo app",
-    description:
-      "Developed a ToDo application using React, which allows users to create and manage tasks with ease. The app includes features such as adding, deleting, and updating tasks, setting due dates and reminders, and filtering tasks based on their status.",
-    tech_stack: ["JavaScript", "React", "API"],
-    github_url: "https://github.com/iritikdev/todoist",
-    live_url: "https://age-calculator-hrx.netlify.app",
-    project_image:
-      "https://github.com/iamkk25/frontend-mentor-todo-app/raw/main/design/desktop-preview.jpg",
   },
 ];

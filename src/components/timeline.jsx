@@ -81,7 +81,7 @@ function AcademyTimeline(props) {
           />
         </TimelineSeparator>
         <AcademyTimelineContent
-          course={"Matric"}
+          course={"Xth"}
           branch=" @ RPS High"
           college={"BSEB, Patna"}
           passingYear={"August 2016"}

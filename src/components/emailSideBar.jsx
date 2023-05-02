@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 
 function EmailSideBar(props) {
   return (
@@ -14,6 +14,14 @@ function EmailSideBar(props) {
         px: 1,
         borderRadius: 0.75,
         display: { lg: "block", md: "none", sm: "none", xs: "none" },
+
+        boxShadow: "none",
+        cursor: "pointer",
+        ":hover": {
+          transform: "translateY(-1.5px)",
+          transition: "all 0.5s",
+          color: "green",
+        },
       }}
     >
       <Typography
@@ -23,12 +31,21 @@ function EmailSideBar(props) {
         letterSpacing={1.4}
         columnGap={1.6}
       >
-        <a
-          style={{ fontSize: 14, color: "#8892b0" }}
+        <Link
+          fontSize={14}
+          color="#8892b0"
+          sx={{
+            textDecoration: "none",
+            ":hover": {
+              transform: "translateY(-2px)",
+              transition: "all 0.5s",
+              color: "#64ffda",
+            },
+          }}
           href="mailto:iritikdev@gmail.com"
         >
           iritikdev@gmail.com
-        </a>
+        </Link>
         <Box
           sx={{
             backgroundColor: "slate.400",

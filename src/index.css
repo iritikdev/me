@@ -75,7 +75,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-accent);
+  color: var(--color-body);
 }
 
 .js-fullscreen-code-action {

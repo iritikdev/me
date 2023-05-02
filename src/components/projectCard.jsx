@@ -1,30 +1,39 @@
 import {
-  Button,
   Card,
   CardActions,
   CardContent,
   CardMedia,
   Typography,
 } from "@mui/material";
-import { externalIcon } from "../assets";
-import { theme } from "./../theme";
-import { FiGithub } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
-function ProjectCard({
-  id,
-  title,
-  subTitle,
-  tags,
-  url,
-  githubUrl,
-  project_image,
-}) {
+import { theme } from "../theme";
+import { AnimatedButton } from "./AnimatedButton";
+
+function ProjectCard({ githubUrl, id, project_image, subTitle, title, url }) {
+  const socials = [
+    {
+      id: 1,
+      icon: <FiGithub size={22} color="#ccd6f6" strokeWidth={2} />,
+      url: githubUrl,
+    },
+    {
+      id: 2,
+      icon: <FiExternalLink size={20} color="#ccd6f6" strokeWidth={2} />,
+      url,
+    },
+  ];
   return (
     <Card
       key={id}
       sx={{
         position: "relative",
-        width: 275,
+
+        width: {
+          xs: 350,
+          sm: 275,
+        },
+
         backgroundColor: theme.palette.blue[400],
         boxShadow: "none",
         cursor: "pointer",
@@ -36,28 +45,6 @@ function ProjectCard({
         p: 0.5,
       }}
     >
-      <CardActions
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          position: "absolute",
-          top: 20,
-          right: 20,
-          overflow: "hidden",
-          backgroundColor: "rgba(0,0,0,0.75)",
-          borderRadius: 0.75,
-          pb: 0.75,
-          px: 1,
-        }}
-      >
-        <a href={githubUrl} target="_blank">
-          <FiGithub size={16} color="#ccd6f6" strokeWidth={2} />
-        </a>
-        <a href={url} target="_blank">
-          <img src={externalIcon} alt="" width={16} />
-        </a>
-      </CardActions>
-
       <CardContent>
         <CardMedia
           component="img"
@@ -94,18 +81,17 @@ function ProjectCard({
         </Typography>
       </CardContent>
 
-      {/* Card Actions */}
-      <CardActions>
-        {tags.map((tag) => (
-          <Button
-            size="small"
-            sx={{
-              textTransform: "capitalize",
-              color: theme.palette.slate[400],
-            }}
-          >
-            {tag}
-          </Button>
+      <CardActions
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          columnGap: 1,
+        }}
+      >
+        {socials.map((social) => (
+          <AnimatedButton>
+            <a href={social.url}>{social.icon}</a>
+          </AnimatedButton>
         ))}
       </CardActions>
     </Card>

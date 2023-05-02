@@ -13,6 +13,6 @@ export const AppButton = styled(Button)(({ theme }) => ({
   cursor: "pointer",
   transition: "all 0.4s ease",
   ":hover": {
-    translate: "0 -3px",
+    translate: "0 -2px",
   },
 }));

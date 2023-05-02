@@ -1,16 +1,44 @@
-import React from "react";
-import { Box, Tooltip } from "@mui/material";
-import { SiFrontendmentor, SiGeeksforgeeks, SiGithub } from "react-icons/si";
-import { hackertankIcon, linkedInIcon } from "../assets";
-import { FiAirplay, FiGithub } from "react-icons/fi";
+import { Box, Stack } from "@mui/material";
+import { BsSpeedometer2 } from "react-icons/bs";
+import { FiAirplay, FiCode, FiGithub, FiLinkedin } from "react-icons/fi";
 
-function SocialSideBar(props) {
+import { AnimatedButton } from "./AnimatedButton";
+
+const socials = [
+  {
+    id: 1,
+    icon: <FiGithub size={22} color="#ccd6f6" strokeWidth={2} />,
+    url: "https://github.com/iritikdev",
+  },
+  {
+    id: 2,
+    icon: <FiLinkedin size={22} color="#ccd6f6" strokeWidth={2} />,
+    url: "#",
+  },
+  {
+    id: 3,
+    icon: <FiCode size={24} color="#ccd6f6" />,
+    url: "#",
+  },
+  {
+    id: 4,
+    icon: <BsSpeedometer2 size={22} color="#ccd6f6" strokeWidth={0.2} />,
+    url: "#",
+  },
+  {
+    id: 5,
+    icon: <FiAirplay size={22} color="#ccd6f6" strokeWidth={2} />,
+    url: "#",
+  },
+];
+
+function SocialSideBar() {
   return (
     <Box
       sx={{
         position: "fixed",
         bottom: 5,
-        left: 50,
+        left: 40,
         py: 2,
         px: 1,
         display: { lg: "block", md: "none", sm: "none", xs: "none" },
@@ -18,46 +46,22 @@ function SocialSideBar(props) {
     >
       <Box
         display={"flex"}
+        alignItems="center"
         flexDirection={"column"}
         rowGap={2}
-        alignItems={"center"}
       >
-        <Box
-          className="social-icons"
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            rowGap: 3,
-          }}
-        >
-          <Tooltip title="github/iritikdev" placement="right">
-            <a href="#" className="hrx-link">
-              <FiGithub size={24} color="#aab5d3" strokeWidth={2} />
-            </a>
-          </Tooltip>
-          <Tooltip title="linkedlin/iritikdev" placement="right">
-            <a href="#">
-              <img src={linkedInIcon} width={22} />
-            </a>
-          </Tooltip>
-          <Tooltip title="Frontend Mentor" placement="right">
-            <a href="#">
-              <FiAirplay size={22} color="#aab5d3" strokeWidth={2} />
-            </a>
-          </Tooltip>
-          <a href="#">
-            <SiGeeksforgeeks size={24} color="#aab5d3" />
-          </a>
-
-          <a href="#">
-            <img src={hackertankIcon} width={24} />
-          </a>
-        </Box>
+        <Stack className="social-icons" spacing={3}>
+          {socials.map((social) => (
+            <AnimatedButton>
+              <a href={social.url}>{social.icon}</a>
+            </AnimatedButton>
+          ))}
+        </Stack>
         <Box
           sx={{
             backgroundColor: "slate.400",
             height: 125,
-            width: 1.6,
+            width: 1.5,
           }}
         ></Box>
       </Box>

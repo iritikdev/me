@@ -3,7 +3,8 @@ import { Box, Tooltip, Typography } from "@mui/material";
 
 import { theme } from "../theme";
 import { bc, hackertankIcon, linkedInIcon } from "../assets";
-import { SiFrontendmentor, SiGeeksforgeeks, SiGithub } from "react-icons/si";
+import { BsSpeedometer2 } from "react-icons/bs";
+import { FiAirplay, FiCode, FiGithub } from "react-icons/fi";
 
 function Footer(props) {
   return (
@@ -66,7 +67,7 @@ function Footer(props) {
       >
         <Tooltip title="github/iritikdev" placement="right">
           <a href="#" className="hrx-link">
-            <SiGithub size={22} color="#ccd6f6" strokeWidth={1} />
+            <FiGithub size={22} color="#ccd6f6" strokeWidth={2} />
           </a>
         </Tooltip>
         <Tooltip title="linkedlin/iritikdev" placement="right">
@@ -76,16 +77,19 @@ function Footer(props) {
         </Tooltip>
         <Tooltip title="Frontend Mentor" placement="right">
           <a href="#">
-            <SiFrontendmentor size={22} color="#ccd6f6" strokeWidth={1} />
+            <FiAirplay size={22} color="#ccd6f6" strokeWidth={2} />
           </a>
         </Tooltip>
-        <a href="#">
-          <SiGeeksforgeeks size={24} color="#ccd6f6" />
-        </a>
-
-        <a href="#">
-          <img src={hackertankIcon} width={24} />
-        </a>
+        <Tooltip title="Geeksforgeeks" placement="right">
+          <a href="#">
+            <FiCode size={24} color="#ccd6f6" />
+          </a>
+        </Tooltip>
+        <Tooltip title="hackerrank" placement="right">
+          <a href="#">
+            <BsSpeedometer2 size={22} color="#ccd6f6" strokeWidth={0.2} />
+          </a>
+        </Tooltip>
       </Box>
     </Box>
   );
