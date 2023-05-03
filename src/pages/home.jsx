@@ -7,8 +7,8 @@ import Hero from "../components/hero";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Article from "../components/article";
-import EmailSideBar from "./../components/emailSideBar";
-import SocialSideBar from "../components/socialSidebar";
+import LeftSidebar from "../components/LeftSidebar";
+import RightSidebar from "../components/RightSidebar";
 
 function Home(props) {
   return (
@@ -17,8 +17,8 @@ function Home(props) {
         <Hero />
         <About />
         <Academy />
-        <EmailSideBar />
-        <SocialSideBar />
+        <RightSidebar />
+        <LeftSidebar />
         <Projects />
         <Article />
         <Contact />

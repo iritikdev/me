@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Link, Typography } from "@mui/material";
 
-function EmailSideBar(props) {
+function RightSidebar(props) {
   return (
     <Box
       sx={{
@@ -58,4 +58,4 @@ function EmailSideBar(props) {
   );
 }
 
-export default EmailSideBar;
+export default RightSidebar;
