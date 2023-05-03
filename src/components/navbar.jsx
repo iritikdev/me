@@ -17,6 +17,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { AppButton } from "./AppButton";
 import { logo, resume } from "../assets/index";
 import { styled } from "@mui/system";
+import { theme } from "./../theme";
 
 function HideOnScroll({ children, window }) {
   const trigger = useScrollTrigger({ target: window });
@@ -111,7 +112,13 @@ function Navbar(props) {
                   ml: 2,
                 }}
               >
-                <a href={resume} download>
+                <a
+                  href={resume}
+                  download
+                  style={{
+                    color: theme.palette.green.main,
+                  }}
+                >
                   Resume
                 </a>
               </AppButton>

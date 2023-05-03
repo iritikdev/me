@@ -17,8 +17,8 @@ import { theme } from "../theme";
 const about = [
   <p>
     Hello! My name is Ritik and I love to create things that live on the
-    internet. My interest in <a class="link">web development </a> started back
-    in 2018 when I was in 2nd year of my diploma.
+    internet. My interest in <a className="link">web development </a> started
+    back in 2018 when I was in 2nd year of my diploma.
   </p>,
   "In my free time, I enjoy building stuff that live on internet. I believe in continuously learning and expanding my knowledge base to stay ahead in the field. ",
   "I am always looking for new opportunities to challenge myself and make a positive impact. Please feel free to explore my website to learn more about my work and connect with me.",

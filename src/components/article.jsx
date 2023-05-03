@@ -1,43 +1,28 @@
-import React, { useState, useEffect } from "react";
 import {
   Box,
   Card,
   CardActions,
   CardContent,
   CardMedia,
-  Stack,
   Typography,
 } from "@mui/material";
 
 import { theme } from "../theme";
 import SectionHeader from "./sectionHeader";
 import { AppButton } from "./AppButton";
-import { getPostsByUsername } from "../services/postService";
 import { Link } from "react-router-dom";
 import { Rings } from "react-loader-spinner";
-
-// const animate = ["fade-right", "fade-up", "fade-left"];
+import useArticles from "../hooks/useArticles";
 
 function Article(props) {
-  const [articles, setArticles] = useState([]);
+  const { data: articles, isLoading, error } = useArticles();
 
-  const populateArticles = async () => {
-    const { data } = await getPostsByUsername();
-    setArticles(data);
-  };
+  if (error) return <p>Something went wrong</p>;
 
-  useEffect(() => {
-    populateArticles();
-  });
   return (
     <div id="blog">
       <Box
         sx={{
-          // height: {
-          //   xs: "1300px",
-          //   sm: "1000px",
-          //   md: "1000px",
-          // },
           mb: {
             xs: 20,
             sm: 20,
@@ -50,10 +35,10 @@ function Article(props) {
           },
         }}
       >
-        <SectionHeader title={"Read my latest blog"} number={"04."} />
+        <SectionHeader number={"04."} title={"Read my latest blog"} />
 
         <Box display="flex" flexWrap="wrap" gap={3} justifyContent="center">
-          {articles.length === 0 && (
+          {isLoading && (
             <Rings
               height="80"
               width="80"
@@ -65,14 +50,14 @@ function Article(props) {
               ariaLabel="rings-loading"
             />
           )}
-          {articles.map((post, index) => (
+          {articles?.map((post, index) => (
             <>
               {index > 2 ? null : (
                 <Card
                   key={index}
                   sx={{
                     width: {
-                      xs: 320,
+                      xs: 300,
                       sm: 275,
                     },
                     cursor: "pointer",
@@ -85,12 +70,12 @@ function Article(props) {
                       }
                     ),
                     "&:hover": {
-                      translate: "0 -4px",
+                      translate: "0 -3px",
                     },
                   }}
                 >
                   <Link to={`/blog/${post.id}`}>
-                    <CardMedia sx={{ height: 140 }} image={post.cover_image} />
+                    <CardMedia sx={{ height: 150 }} image={post.cover_image} />
                     <CardContent>
                       <Typography
                         gutterBottom

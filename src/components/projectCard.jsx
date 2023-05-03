@@ -30,7 +30,7 @@ function ProjectCard({ githubUrl, id, project_image, subTitle, title, url }) {
         position: "relative",
 
         width: {
-          xs: 320,
+          xs: 300,
           sm: 275,
         },
 

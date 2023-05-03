@@ -5,6 +5,7 @@ import { theme } from "../theme";
 import { bc, hackertankIcon, linkedInIcon } from "../assets";
 import { BsSpeedometer2 } from "react-icons/bs";
 import { FiAirplay, FiCode, FiGithub } from "react-icons/fi";
+import SocialIcons from "./SocialIcons";
 
 function Footer(props) {
   return (
@@ -41,7 +42,7 @@ function Footer(props) {
           }}
         >
           Build by Ritik Sharma & Design adapted from&nbsp;
-          <img src={bc} alt="Brittany Chang" srcset="" width={18} />
+          <img src={bc} alt="Brittany Chang" width={18} />
           <Typography
             component={"span"}
             sx={{
@@ -65,31 +66,7 @@ function Footer(props) {
           columnGap: 2,
         }}
       >
-        <Tooltip title="github/iritikdev" placement="right">
-          <a href="#" className="hrx-link">
-            <FiGithub size={22} color="#ccd6f6" strokeWidth={2} />
-          </a>
-        </Tooltip>
-        <Tooltip title="linkedlin/iritikdev" placement="right">
-          <a href="#">
-            <img src={linkedInIcon} width={22} />
-          </a>
-        </Tooltip>
-        <Tooltip title="Frontend Mentor" placement="right">
-          <a href="#">
-            <FiAirplay size={22} color="#ccd6f6" strokeWidth={2} />
-          </a>
-        </Tooltip>
-        <Tooltip title="Geeksforgeeks" placement="right">
-          <a href="#">
-            <FiCode size={24} color="#ccd6f6" />
-          </a>
-        </Tooltip>
-        <Tooltip title="hackerrank" placement="right">
-          <a href="#">
-            <BsSpeedometer2 size={22} color="#ccd6f6" strokeWidth={0.2} />
-          </a>
-        </Tooltip>
+        <SocialIcons direction="row" />
       </Box>
     </Box>
   );
