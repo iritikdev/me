@@ -73,11 +73,13 @@ function ProjectCard({ githubUrl, id, project_image, subTitle, title, url }) {
           variant="body2"
           color="text.secondary"
           sx={{
+            fontSize: 14,
+            fontWeight: 500,
             color: theme.palette.slate[400],
             mb: 0.8,
           }}
         >
-          {`${subTitle.slice(0, 80)}...`}
+          {subTitle}
         </Typography>
       </CardContent>
 

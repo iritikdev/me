@@ -39,6 +39,7 @@ function Projects(props) {
               githubUrl={project.github_url}
               tags={project.tech_stack}
               project_image={project.project_image}
+              url={project.live_url}
             />
           ))}
         </Box>

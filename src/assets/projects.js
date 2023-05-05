@@ -42,32 +42,32 @@ export const projectsDetails = [
     id: 1,
     title: "Frontend Mentor - Age calculator app",
     description:
-      "Developed a ToDo application using React, which allows users to create and manage tasks with ease. The app includes features such as adding, deleting, and updating tasks, setting due dates and reminders, and filtering tasks based on their status.",
+      "Age Calculator app, built with React - a simple and easy-to-use tool for calculating your age in years, months, and days!",
     tech_stack: ["JavaScript", "React", "API"],
-    github_url: "https://github.com/iritikdev/todoist",
+    github_url: "https://github.com/iritikdev/age-calculator",
     live_url: "https://age-calculator-hrx.netlify.app",
     project_image:
       "https://github.com/iritikdev/age-calculator/blob/master/design/desktop-completed.jpg?raw=true",
   },
   {
     id: 2,
-    title: "Frontend Mentor - Todo app",
+    title: "Todoist : A Todo app - Fronted Mentor",
     description:
-      "Developed a ToDo application using React, which allows users to create and manage tasks with ease. The app includes features such as adding, deleting, and updating tasks, setting due dates and reminders, and filtering tasks based on their status.",
+      "Developed a React-based ToDo app with features like adding, deleting, updating tasks, and filtering by status for easy task management.",
     tech_stack: ["JavaScript", "React", "API"],
     github_url: "https://github.com/iritikdev/todoist",
-    live_url: "https://age-calculator-hrx.netlify.app",
+    live_url: "https://todoist-hrx.netlify.app/",
     project_image:
       "https://github.com/iamkk25/frontend-mentor-todo-app/raw/main/design/desktop-preview.jpg",
   },
   {
     id: 3,
-    title: "Frontend Mentor - IP Address Tracker",
+    title: "TrackYourIP - IP Address Tracker App",
     description:
-      "Developed a ToDo application using React, which allows users to create and manage tasks with ease. The app includes features such as adding, deleting, and updating tasks, setting due dates and reminders, and filtering tasks based on their status.",
+      "Built with React, LeafletJS & IP Geolocation API by IPify, to track and locate any IP address in the world!",
     tech_stack: ["JavaScript", "React", "API"],
-    github_url: "https://github.com/iritikdev/todoist",
-    live_url: "https://age-calculator-hrx.netlify.app",
+    github_url: "https://github.com/iritikdev/ip-address-tracker",
+    live_url: "https://track-my-ipaddress.netlify.app",
     project_image:
       "https://github.com/iritikdev/ip-address-tracker/blob/master/design/desktop-design.jpg?raw=true",
   },
