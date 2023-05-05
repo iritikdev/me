@@ -8,7 +8,7 @@ import Contact from "../components/contact";
 import Article from "../components/article";
 import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
-import Hero from "../components/Hero";
+import Hero from "../components/hero";
 
 function Home(props) {
   return (
