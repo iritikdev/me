@@ -14,10 +14,9 @@ import {
   Drawer,
 } from "@mui/material";
 import { BiMenuAltRight } from "react-icons/bi";
-import { AppButton } from "./AppButton";
+import AppButton from "./AppButton";
 import { logo, resume } from "../assets/index";
 import { styled } from "@mui/system";
-import { theme } from "./../theme";
 
 function HideOnScroll({ children, window }) {
   const trigger = useScrollTrigger({ target: window });

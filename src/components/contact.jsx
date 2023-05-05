@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
-import SectionHeader from "./sectionHeader";
-import { AppButton } from "./AppButton";
+import AppButton from "./AppButton";
 
 const contact = {
   title: "05. What's Next?",

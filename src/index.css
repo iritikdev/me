@@ -199,6 +199,7 @@ a {
   color: var(--color-accent);
   transition: border-bottom 0.5s;
   line-height: normal;
+  cursor: pointer;
 }
 
 
@@ -213,4 +214,8 @@ a {
 
 .link:hover::after {
   width: 100%;
+}
+
+svg:hover {
+  color: #64ffda !important;
 }

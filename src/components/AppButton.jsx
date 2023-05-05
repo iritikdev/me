@@ -1,6 +1,6 @@
 import { styled, Button } from "@mui/material";
 
-export const AppButton = styled(Button)(({ theme }) => ({
+const AppButton = styled(Button)(({ theme }) => ({
   color: theme.palette.green.main,
   backgroundColor: "transparent",
   border: `1px solid ${theme.palette.green.main}`,
@@ -16,3 +16,5 @@ export const AppButton = styled(Button)(({ theme }) => ({
     translate: "0 -2px",
   },
 }));
+
+export default AppButton;

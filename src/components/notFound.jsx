@@ -1,6 +1,6 @@
 import { Box, Link, Typography } from "@mui/material";
 import { theme } from "./../theme";
-import { AppButton } from "./AppButton";
+import AppButton from "./AppButton";
 import { FiArrowLeft } from "react-icons/fi";
 
 function NotFound(props) {

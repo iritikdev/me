@@ -6,15 +6,18 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import { theme } from "../theme";
+import AppButton from "./AppButton";
 import SectionHeader from "./sectionHeader";
-import { AppButton } from "./AppButton";
-import { Link } from "react-router-dom";
-import { Rings } from "react-loader-spinner";
 import useArticles from "../hooks/useArticles";
+import LoadingSpinner from "./LoadingSpinner";
+import TagList from "./TagList";
+import CardTitle from "./CardTitle";
+import CardSubtitle from "./CardSubtitle";
 
-function Article(props) {
+function Article() {
   const { data: articles, isLoading, error } = useArticles();
 
   if (error) return <p>Something went wrong</p>;
@@ -31,25 +34,14 @@ function Article(props) {
           px: {
             xs: 2,
             sm: 10,
-            md: 16,
+            md: 14,
           },
         }}
       >
         <SectionHeader number={"04."} title={"Read my latest blog"} />
 
         <Box display="flex" flexWrap="wrap" gap={3} justifyContent="center">
-          {isLoading && (
-            <Rings
-              height="80"
-              width="80"
-              color={theme.palette.green.main}
-              radius="6"
-              wrapperStyle={{}}
-              wrapperClass=""
-              visible={true}
-              ariaLabel="rings-loading"
-            />
-          )}
+          <LoadingSpinner isLoading={isLoading} theme={theme} />
           {articles?.map((post, index) => (
             <>
               {index > 2 ? null : (
@@ -75,31 +67,11 @@ function Article(props) {
                   }}
                 >
                   <Link to={`/blog/${post.id}`}>
-                    <CardMedia sx={{ height: 150 }} image={post.cover_image} />
+                    <CardMedia sx={{ height: 130 }} image={post.cover_image} />
+
                     <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant="h6"
-                        component="div"
-                        fontSize={15}
-                        fontWeight={600}
-                        lineHeight={1.35}
-                        color={theme.palette.slate[200]}
-                        sx={{
-                          ":hover": {
-                            color: theme.palette.green.main,
-                          },
-                        }}
-                      >
-                        {post.title}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        fontSize={14}
-                        color={theme.palette.slate[400]}
-                      >
-                        {post.description}
-                      </Typography>
+                      <CardTitle>{post.title}</CardTitle>
+                      <CardSubtitle>{post.description}</CardSubtitle>
                     </CardContent>
                   </Link>
 
@@ -110,36 +82,8 @@ function Article(props) {
                       position: "relative",
                     }}
                   >
-                    <CardActions>
-                      {post.tag_list.map((item, index) => (
-                        <>
-                          {index > 1 ? null : (
-                            <AppButton
-                              key={item.id}
-                              sx={{
-                                py: 0.1,
-                                px: 0.4,
-                                color: theme.palette.slate[200],
-                                border: "none",
-                                textTransform: "none",
-                                "&:hover": {
-                                  color: theme.palette.slate[200],
-                                },
-                              }}
-                            >
-                              <Typography
-                                sx={{
-                                  fontSize: 12,
-                                  fontWeight: "300",
-                                  fontFamily: "Fira Code",
-                                }}
-                              >
-                                {item}
-                              </Typography>
-                            </AppButton>
-                          )}
-                        </>
-                      ))}
+                    <CardActions sx={{ pl: 2 }}>
+                      <TagList tag_list={post.tag_list} />
                     </CardActions>
                   </Box>
                 </Card>
@@ -154,9 +98,9 @@ function Article(props) {
             justifyContent: "center",
           }}
         >
-          <AppButton>
-            <Link to={"/blog"}>Read more!</Link>
-          </AppButton>
+          <Link to={"/blog"} color={theme.palette.green.main}>
+            <AppButton>Read more!</AppButton>
+          </Link>
         </Box>
       </Box>
     </div>

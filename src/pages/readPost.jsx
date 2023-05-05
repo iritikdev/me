@@ -16,7 +16,7 @@ import {
 import { Container } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { AppButton } from "../components/AppButton";
+import AppButton from "../components/AppButton";
 import { getPostById } from "../services/postService";
 import { theme } from "../theme";
 import { Parser } from "html-to-react";

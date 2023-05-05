@@ -2,7 +2,7 @@ import React from "react";
 
 import { TimelineContent } from "@mui/lab";
 import { Box, Typography } from "@mui/material";
-import { AppButton } from "./AppButton";
+import AppButton from "./AppButton";
 
 function AcademyTimelineContent({
   course,

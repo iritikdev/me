@@ -1,7 +1,7 @@
 import { Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState, useEffect } from "react";
-import { AppButton } from "./AppButton";
+import AppButton from "./AppButton";
 
 function Hero(props) {
   const theme = useTheme();
@@ -104,7 +104,8 @@ function Hero(props) {
         >
           I’m a fullstack developer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I’m studied
-          computer science & engineering at LNJP institute of technology.
+          computer science & engineering at{" "}
+          <span className="link">LNJP institute of technology</span>
         </Typography>
 
         <AppButton

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import {
   Box,
   Card,
@@ -9,25 +8,19 @@ import {
   CardActions,
   useTheme,
 } from "@mui/material";
-import { Dna, ProgressBar, Rings } from "react-loader-spinner";
-import { theme } from "./../theme";
-
-import { getPostsByUsername } from "../services/postService";
-import { AppButton } from "./../components/AppButton";
+import { Rings } from "react-loader-spinner";
 import { Link } from "react-router-dom";
+
+import AppButton from "../components/AppButton";
+import useArticles from "../hooks/useArticles";
+import LoadingSpinner from "../components/LoadingSpinner";
+import TagList from "../components/TagList";
+import CardTitle from "../components/CardTitle";
+import CardSubtitle from "../components/CardSubtitle";
 
 function Blog(props) {
   const theme = useTheme();
-  const [posts, setPosts] = useState([]);
-
-  const populatePost = async () => {
-    const { data } = await getPostsByUsername();
-    setPosts(data);
-  };
-
-  useEffect(() => {
-    populatePost();
-  }, []);
+  const { data: posts, isLoading, error } = useArticles();
 
   return (
     <Box
@@ -46,25 +39,14 @@ function Blog(props) {
           justifyContent: "center",
         }}
       >
-        {posts.length === 0 && (
-          <Rings
-            height="80"
-            width="80"
-            color={theme.palette.green.main}
-            radius="6"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-            ariaLabel="rings-loading"
-          />
-        )}
-        {posts.map((post, index) => (
+        <LoadingSpinner isLoading={isLoading} theme={theme} />
+        {posts?.map((post, index) => (
           <Card
-            data-aos="fade-up"
+            data-aos="fade-in"
             key={index}
             sx={{
               width: {
-                xs: 350,
+                xs: 300,
                 sm: 250,
               },
               cursor: "pointer",
@@ -85,29 +67,8 @@ function Blog(props) {
                 title="green iguana"
               />
               <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="div"
-                  fontSize={15}
-                  fontWeight={600}
-                  lineHeight={1.35}
-                  color={theme.palette.slate[200]}
-                  sx={{
-                    ":hover": {
-                      color: theme.palette.green.main,
-                    },
-                  }}
-                >
-                  {post.title}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  fontSize={14}
-                  color={theme.palette.slate[400]}
-                >
-                  {post.description}
-                </Typography>
+                <CardTitle>{post.title}</CardTitle>
+                <CardSubtitle>{post.description}</CardSubtitle>
               </CardContent>
             </Link>
             <Box
@@ -118,34 +79,7 @@ function Blog(props) {
               }}
             >
               <CardActions>
-                {post.tag_list.map((item, index) => (
-                  <>
-                    {index > 1 ? null : (
-                      <AppButton
-                        key={item.id}
-                        sx={{
-                          py: 0.1,
-                          px: 0.4,
-                          color: theme.palette.slate[200],
-                          textTransform: "none",
-                          "&:hover": {
-                            color: theme.palette.slate[200],
-                          },
-                        }}
-                      >
-                        <Typography
-                          sx={{
-                            fontSize: 12,
-                            fontWeight: "300",
-                            fontFamily: "Fira Code",
-                          }}
-                        >
-                          {item}
-                        </Typography>
-                      </AppButton>
-                    )}
-                  </>
-                ))}
+                <TagList tag_list={post.tag_list} />
               </CardActions>
             </Box>
           </Card>

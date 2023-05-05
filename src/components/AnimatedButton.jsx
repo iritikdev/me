@@ -12,7 +12,7 @@ export const AnimatedButton = styled(IconButton)(({ theme }) => ({
   transition: "all 0.4s ease",
   ":hover": {
     backgroundColor: "transparent",
-    translate: "0 -2px",
+    translate: "0 -3px",
     color: "blue",
   },
 }));
