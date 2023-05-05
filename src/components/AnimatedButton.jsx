@@ -1,4 +1,4 @@
-import { styled, Button, IconButton } from "@mui/material";
+import { styled, IconButton } from "@mui/material";
 
 export const AnimatedButton = styled(IconButton)(({ theme }) => ({
   color: theme.palette.green.main,
