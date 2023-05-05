@@ -1,43 +1,15 @@
-import { DiJavascript1, DiReact } from "react-icons/di";
-import { SiMaterialui, SiNodedotjs, SiExpress } from "react-icons/si";
-// import { useTheme } from "@mui/material";
-
-// const theme = useTheme();
-
-// export const stack = [
-//   {
-//     id: 1,
-//     name: "JavaScript",
-//     icon: <DiJavascript1 color={theme.palette.blue[800]} size={16} />,
-//     color: "#fcdc00",
-//   },
-//   {
-//     id: 2,
-//     name: "React",
-//     icon: <DiReact color={theme.palette.blue[800]} size={16} />,
-//     color: "#61dafb",
-//   },
-//   {
-//     id: 3,
-//     name: "mui",
-//     icon: <SiMaterialui color={theme.palette.blue[800]} size={14} />,
-//     color: "#007fff",
-//   },
-//   {
-//     id: 4,
-//     name: "Node",
-//     icon: <SiNodedotjs color={theme.palette.blue[800]} size={14} />,
-//     color: "#026e00",
-//   },
-//   {
-//     id: 5,
-//     name: "Express",
-//     icon: <SiExpress color={theme.palette.blue[800]} size={14} />,
-//     color: "#259dff",
-//   },
-// ];
-
 export const projectsDetails = [
+  {
+    id: 0,
+    title: "Data Structure & Algorithm JS",
+    description:
+      "A NPM package for data structures and algorithms in JavaScript with a user-friendly interface, catering to C++ and Java developers.",
+    tech_stack: ["JavaScript", "Data structure", "Algorithm"],
+    github_url: "https://github.com/iritikdev/dsa-js",
+    live_url: "",
+    project_image:
+      "https://github.com/iritikdev/dsa-js/blob/master/cover.jpeg?raw=true",
+  },
   {
     id: 1,
     title: "Frontend Mentor - Age calculator app",
@@ -70,5 +42,16 @@ export const projectsDetails = [
     live_url: "https://track-my-ipaddress.netlify.app",
     project_image:
       "https://github.com/iritikdev/ip-address-tracker/blob/master/design/desktop-design.jpg?raw=true",
+  },
+  {
+    id: 4,
+    title: "Frontend Mentor - Advice generator app",
+    description:
+      "Daily source of inspiration and wisdom! App built with HTML, CSS, and Vanilla JS, connects to Advice Slip API for helpful advice.",
+    tech_stack: ["JavaScript", "React", "API"],
+    github_url: "https://github.com/iritikdev/advice-generator-app",
+    live_url: "https://advice-generator-app-hrx.netlify.app",
+    project_image:
+      "https://github.com/iritikdev/advice-generator-app/blob/master/design/desktop-preview.jpg?raw=true",
   },
 ];

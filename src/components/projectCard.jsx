@@ -92,7 +92,7 @@ function ProjectCard({ githubUrl, id, project_image, subTitle, title, url }) {
       >
         {socials.map((social) => (
           <AnimatedButton>
-            <a href={social.url}>{social.icon}</a>
+            {social.url && <a href={social.url}>{social.icon}</a>}
           </AnimatedButton>
         ))}
       </CardActions>
