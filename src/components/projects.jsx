@@ -35,10 +35,10 @@ function Projects(props) {
             <ProjectCard
               id={index}
               title={project.title}
-              subTitle={project.description}
+              description={project.description}
               githubUrl={project.github_url}
               tags={project.tech_stack}
-              project_image={project.project_image}
+              cover={project.project_image}
               url={project.live_url}
             />
           ))}

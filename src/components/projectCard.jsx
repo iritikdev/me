@@ -4,13 +4,47 @@ import {
   CardContent,
   CardMedia,
   Typography,
+  styled,
 } from "@mui/material";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 import { theme } from "../theme";
 import { AnimatedButton } from "./AnimatedButton";
+import { useState } from "react";
 
-function ProjectCard({ githubUrl, id, project_image, subTitle, title, url }) {
+const Container = styled(Card)(({ theme }) => ({
+  position: "relative",
+  [theme.breakpoints.up("xs")]: {
+    width: 300,
+  },
+  [theme.breakpoints.up("sm")]: {
+    width: 275,
+  },
+  backgroundColor: theme.palette.blue[400],
+  boxShadow: "none",
+  cursor: "pointer",
+  ":hover": {
+    transform: "translateY(-3px)",
+    transition: "all 0.5s",
+    boxShadow: theme.shadows[20],
+  },
+}));
+
+const Title = styled(Typography)(({ theme }) => ({
+  fontWeight: "700",
+  lineHeight: "1.5",
+  fontSize: 18,
+  mb: 1,
+}));
+const Subtitle = styled(Typography)(({ theme }) => ({
+  fontSize: 14,
+  fontWeight: 500,
+  color: theme.palette.slate[400],
+  mb: 0.8,
+}));
+
+function ProjectCard({ githubUrl, id, cover, description, title, url }) {
+  const [isHover, setIsHover] = useState(false);
   const socials = [
     {
       id: 1,
@@ -24,63 +58,30 @@ function ProjectCard({ githubUrl, id, project_image, subTitle, title, url }) {
     },
   ];
   return (
-    <Card
+    <Container
       key={id}
-      sx={{
-        position: "relative",
-
-        width: {
-          xs: 300,
-          sm: 275,
-        },
-
-        backgroundColor: theme.palette.blue[400],
-        boxShadow: "none",
-        cursor: "pointer",
-        ":hover": {
-          transform: "translateY(-2px)",
-          transition: "all 0.5s",
-          boxShadow: 20,
-        },
-        p: 0.5,
-      }}
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
     >
       <CardContent>
         <CardMedia
           component="img"
           height="150"
-          image={project_image}
+          image={cover}
           sx={{
             mb: 1.6,
             borderRadius: 0.9,
           }}
         />
-        <Typography
+        <Title
+          color={isHover ? theme.palette.green.main : theme.palette.slate[200]}
           gutterBottom
           variant="h6"
           component="div"
-          sx={{
-            fontWeight: "700",
-            lineHeight: "1.5",
-            fontSize: 18,
-            color: theme.palette.slate[200],
-            mb: 1,
-          }}
         >
           {title}
-        </Typography>
-        <Typography
-          variant="body2"
-          color="text.secondary"
-          sx={{
-            fontSize: 14,
-            fontWeight: 500,
-            color: theme.palette.slate[400],
-            mb: 0.8,
-          }}
-        >
-          {subTitle}
-        </Typography>
+        </Title>
+        <Subtitle variant="body2">{description}</Subtitle>
       </CardContent>
 
       <CardActions
@@ -96,7 +97,7 @@ function ProjectCard({ githubUrl, id, project_image, subTitle, title, url }) {
           </AnimatedButton>
         ))}
       </CardActions>
-    </Card>
+    </Container>
   );
 }
 
