@@ -6,7 +6,7 @@ export const projectsDetails = [
       "A NPM package for data structures and algorithms in JavaScript with a user-friendly interface, catering to C++ and Java developers.",
     tech_stack: ["JavaScript", "Data structure", "Algorithm"],
     github_url: "https://github.com/iritikdev/dsa-js",
-    live_url: "",
+    live_url: "https://www.npmjs.com/package/hrx-data-structures",
     project_image:
       "https://github.com/iritikdev/dsa-js/blob/master/cover.jpeg?raw=true",
   },
