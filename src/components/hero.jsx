@@ -2,6 +2,7 @@ import { Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import AppButton from "./AppButton";
+import Underline from "../assets/underline.svg";
 
 function Hero(props) {
   const theme = useTheme();
@@ -102,9 +103,9 @@ function Hero(props) {
             maxWidth: "560px",
           }}
         >
-          I’m a fullstack developer specializing in building (and occasionally
+          I'm a fullstack developer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I’m studied
-          computer science & engineering at{" "}
+          computer science & engineering at
           <span className="link">LNJP institute of technology</span>
         </Typography>
 

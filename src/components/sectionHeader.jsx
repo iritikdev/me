@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { Typography, useTheme, Divider } from "@mui/material";
+import Underline from "../assets/underline.svg";
 
 function SectionHeader({ number, title }) {
   const theme = useTheme();
