@@ -7,12 +7,14 @@ import {
   Button,
 } from "@mui/material";
 import React from "react";
-import { profileRitik, ritik, ritiksm } from "../assets";
+import { profileRitik, ritik, ritiksm, rv2 } from "../assets";
 import SectionHeader from "./sectionHeader";
 import { DiJavascript1, DiReact } from "react-icons/di";
 import { SiNodedotjs, SiExpress, SiExpo } from "react-icons/si";
 import { TbBrandPython } from "react-icons/tb";
 import { theme } from "../theme";
+import "./about.css";
+
 
 const about = [
   <p>
@@ -65,10 +67,11 @@ const stack = [
     color: "#259dff",
   },
 ];
+
 function About(props) {
   const theme = useTheme();
   return (
-    <div id="about" data-aos="fade-up">
+    <div id="about" data-aos="fade-in">
       <Box
         sx={{
           height: {
@@ -152,11 +155,7 @@ function About(props) {
               justifyContent: "center",
             }}
           >
-            <Profile
-              src={profileRitik}
-              alt="Ritik Sharma"
-              data-aos="zoom-in-up"
-            />
+            <Profile />
           </Box>
         </Stack>
       </Box>
@@ -164,14 +163,35 @@ function About(props) {
   );
 }
 
-const Profile = styled("img")(({ theme }) => ({
-  boxShadow:
-    "blue 0px 0px 0px 2px inset, #0a192f 15px 15px 0px -2px, rgb(100, 255, 218) 15px 15px",
+const Profile = styled("div")(({ theme }) => ({
+  "@keyframes spin": {
+    "0%": {
+      borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%"
+  },
+  "50%": {
+    borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%"
+  },
+  "100%": {
+      borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%"
+  }
+  },
+  background: `url(${rv2})`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+  justifySelf: "center",
+  width: "300px",
+  height: "300px",
+  boxShadow: "inset 0 0 0 4px rgb(100 255 218)",
+  animation: `spin 8s ease-in-out infinite 1s` ,
+
   // boxShadow:
-  // "rgba(100, 255, 218, 0.4) 5px 5px, rgba(100, 255, 218, 0.3) 10px 10px, rgba(100, 255, 218, 0.2) 15px 15px, rgba(100, 255, 218, 0.1) 20px 20px, rgba(100, 255, 218, 0.05) 25px 25px",
-  width: 230,
-  borderRadius: "4px",
-  filter: "grayscale(40%) contrast(1)",
+//   "blue 0px 0px 0px 2px inset, #0a192f 15px 15px 0px -2px, rgb(100, 255, 218) 15px 15px",
+// boxShadow:
+// "rgba(100, 255, 218, 0.4) 5px 5px, rgba(100, 255, 218, 0.3) 10px 10px, rgba(100, 255, 218, 0.2) 15px 15px, rgba(100, 255, 218, 0.1) 20px 20px, rgba(100, 255, 218, 0.05) 25px 25px",
+// width: 230,
+// borderRadius: "4px",
+// filter: "grayscale(40%) contrast(1)",
 }));
 
 export default About;

@@ -1,6 +1,14 @@
 import { Stack } from "@mui/material";
 import { BsSpeedometer2 } from "react-icons/bs";
-import { FiAirplay, FiCode, FiGithub, FiLinkedin } from "react-icons/fi";
+import {
+  FiAirplay,
+  FiCode,
+  FiGithub,
+  FiLinkedin,
+  FiMessageCircle,
+} from "react-icons/fi";
+import { FaDev } from "react-icons/fa";
+import { AiOutlineQrcode } from "react-icons/ai";
 import { AnimatedButton } from "./AnimatedButton";
 
 const socials = [
@@ -12,22 +20,22 @@ const socials = [
   {
     id: 2,
     icon: <FiLinkedin size={22} color="#ccd6f6" strokeWidth={2} />,
-    url: "#",
+    url: "https://github.com/iritikdev",
   },
   {
     id: 3,
     icon: <FiCode size={24} color="#ccd6f6" />,
-    url: "#",
+    url: "https://github.com/iritikdev",
   },
   {
     id: 4,
-    icon: <BsSpeedometer2 size={22} color="#ccd6f6" strokeWidth={0.2} />,
-    url: "#",
+    icon: <FiMessageCircle size={24} color="#ccd6f6" />,
+    url: "https://github.com/iritikdev",
   },
   {
     id: 5,
-    icon: <FiAirplay size={22} color="#ccd6f6" strokeWidth={2} />,
-    url: "#",
+    icon: <AiOutlineQrcode size={22} color="#ccd6f6" strokeWidth={2} />,
+    url: "https://github.com/iritikdev",
   },
 ];
 
