@@ -6,6 +6,7 @@ import {
   FiGithub,
   FiLinkedin,
   FiMessageCircle,
+  FiTwitter,
 } from "react-icons/fi";
 import { FaDev } from "react-icons/fa";
 import { AiOutlineQrcode } from "react-icons/ai";
@@ -34,7 +35,7 @@ const socials = [
   },
   {
     id: 5,
-    icon: <AiOutlineQrcode size={22} color="#ccd6f6" strokeWidth={2} />,
+    icon: <FiTwitter size={22} color="#ccd6f6" strokeWidth={2} />,
     url: "https://github.com/iritikdev",
   },
 ];

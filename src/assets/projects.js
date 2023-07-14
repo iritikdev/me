@@ -1,5 +1,15 @@
 export const projectsDetails = [
   {
+    id: 12,
+    title: "Cloudify-host",
+    description: "A frontend website that is designed with pure HTML and CSS.",
+    tech_stack: ["JavaScript", "Data structure", "Algorithm"],
+    github_url: "https://github.com/iritikdev/cloudify-host",
+    live_url: "https://cloudify-host.netlify.app/",
+    project_image:
+      "https://github.com/iritikdev/cloudify-host/blob/main/images/1.PNG",
+  },
+  {
     id: 0,
     title: "Data Structure & Algorithm JS",
     description:

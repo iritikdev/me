@@ -54,7 +54,7 @@ function Hero(props) {
             fontFamily: "Fira Code",
           }}
         >
-          Hi!, my name is
+          Namaste!, my name is
         </Typography>
         <br />
         <Typography
@@ -70,7 +70,7 @@ function Hero(props) {
             mb: 1,
           }}
         >
-          Ritik Sharma
+          Ritik Sharma 
         </Typography>
         <Typography
           variant="h3"
