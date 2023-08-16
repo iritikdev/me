@@ -156,6 +156,7 @@ function About(props) {
             }}
           >
             <Profile />
+            <GATECard> GATE CS 2023 Qualified </GATECard>
           </Box>
         </Stack>
       </Box>
@@ -163,6 +164,22 @@ function About(props) {
   );
 }
 
+
+const GATECard = styled("div")(({ theme }) => ({
+  marginTop : 20,
+  height : 40,
+textAlign : "center",
+ backgroundColor:"#112240",
+ display : "flex",
+ alignItems : "center",
+ justifyContent : "center",
+ color : "#8892b0",
+ fontFamily : "Inter",
+ borderRadius : "4px",
+ 
+
+
+}));
 const Profile = styled("div")(({ theme }) => ({
   "@keyframes spin": {
     "0%": {
