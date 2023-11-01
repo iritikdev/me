@@ -1,19 +1,21 @@
 import { Box } from "@mui/material";
 import React from "react";
-import { theme } from "../theme";
 
-function Badge({ children, sm=false }) {
+
+
+function Badge({colorScheme, children, sm=false }) {
+ 
   return (
     <Box
-      display={"inline-flex"}
-      bgcolor={theme.palette.green.accent}
+    color={`${colorScheme}.main`}
+      bgcolor={`${colorScheme}.accent`}
       borderRadius={6}
-      py={"5px"}
-      px={2}
-      color={theme.palette.green.main}
+      display={"inline-flex"}
       fontFamily={"Inter"}
       fontSize={sm ? 11 : "small"}
-      ml={1}
+      mr={1}
+      px={2}
+      py={"5px"}
     >
       {children}
     </Box>
