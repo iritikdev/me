@@ -30,11 +30,12 @@ function SectionHeader({ number, title }) {
           wordBreak: "keep-all",
           fontSize: {
             xs: 20,
-            md: 22,
+            md: 24,
           },
-          fontWeight: "bold",
-          letterSpacing: 1.2,
+          
+          
           color: theme.palette.slate[200],
+          fontFamily: "averta-bold"
         }}
       >
         {title}

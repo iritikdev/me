@@ -9,6 +9,7 @@ import Article from "../components/article";
 import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
 import Hero from "../components/hero";
+import ProjectSection from "../components/ProjectSection";
 
 function Home(props) {
   return (
@@ -17,6 +18,7 @@ function Home(props) {
         <Hero />
         <About />
         <Academy />
+        <ProjectSection />
         <RightSidebar />
         <LeftSidebar />
         <Projects />

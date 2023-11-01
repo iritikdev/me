@@ -43,8 +43,8 @@ function AcademyTimeline(props) {
           course={"B.Tech"}
           branch=" in Computer Science & Engineering"
           college={"Aryabhatta Knowledge University"}
-          score="CGPA 8.0"
-          passingYear={"Persuing"}
+          score="CGPA 8.23"
+          passingYear={"Sep 2023"}
         />
       </TimelineItem>
 

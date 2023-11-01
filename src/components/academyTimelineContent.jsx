@@ -3,6 +3,7 @@ import React from "react";
 import { TimelineContent } from "@mui/lab";
 import { Box, Typography } from "@mui/material";
 import AppButton from "./AppButton";
+import Badge from "./Badge";
 
 function AcademyTimelineContent({
   course,
@@ -66,27 +67,8 @@ function AcademyTimelineContent({
         {college}
       </Typography>
 
-      <AppButton
-        sx={{
-          py: 0.5,
-          fontSize: 10,
-          px: 1,
-          mr: {
-            sm: 0.8,
-          },
-        }}
-      >
-        {passingYear}
-      </AppButton>
-      <AppButton
-        sx={{
-          py: 0.5,
-          fontSize: 11,
-          px: 1,
-        }}
-      >
-        {score}
-      </AppButton>
+      <Badge sm>{passingYear}</Badge>
+      <Badge sm>{score}</Badge>
     </TimelineContent>
   );
 }

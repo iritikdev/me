@@ -24,7 +24,7 @@ function Projects(props) {
           },
         }}
       >
-        <SectionHeader title={"Some Things I've Built"} number={"03."} />
+        <SectionHeader title={"Some Things I've Built"} number={"04."} />
         <Box
           display={"flex"}
           flexWrap={"wrap"}

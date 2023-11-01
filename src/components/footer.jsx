@@ -1,10 +1,8 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import { Box, Tooltip, Typography } from "@mui/material";
 
+import { bc } from "../assets";
 import { theme } from "../theme";
-import { bc, hackertankIcon, linkedInIcon } from "../assets";
-import { BsSpeedometer2 } from "react-icons/bs";
-import { FiAirplay, FiCode, FiGithub } from "react-icons/fi";
 import SocialIcons from "./SocialIcons";
 
 function Footer(props) {
@@ -32,7 +30,8 @@ function Footer(props) {
             textAlign: "center",
             cursor: "pointer",
             pb: 1,
-            fontSize: 12,
+            lineHeight:1.5,
+            fontSize: 13,
             fontWeight: "300",
             fontFamily: "Fira Code",
             color: theme.palette.slate[200],
@@ -41,8 +40,10 @@ function Footer(props) {
             },
           }}
         >
-          Build by Ritik Sharma & Design adapted from&nbsp;
-          <img src={bc} alt="Brittany Chang" width={18} />
+         © {new Date().getFullYear()}, Ritik Kumar. All rights reserved.
+         <br />
+         This site has been developed by myself using React, MUI.
+          
           <Typography
             component={"span"}
             sx={{

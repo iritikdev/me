@@ -15,7 +15,6 @@ import { TbBrandPython } from "react-icons/tb";
 import { theme } from "../theme";
 import "./about.css";
 
-
 const about = [
   <p>
     Hello! 👋 My name is Ritik and I love to create things that live on the
@@ -156,7 +155,7 @@ function About(props) {
             }}
           >
             <Profile />
-            <GATECard> GATE CS 2023 Qualified </GATECard>
+         
           </Box>
         </Stack>
       </Box>
@@ -164,33 +163,29 @@ function About(props) {
   );
 }
 
-
 const GATECard = styled("div")(({ theme }) => ({
-  marginTop : 20,
-  height : 40,
-textAlign : "center",
- backgroundColor:"#112240",
- display : "flex",
- alignItems : "center",
- justifyContent : "center",
- color : "#8892b0",
- fontFamily : "Inter",
- borderRadius : "4px",
- 
-
-
+  marginTop: 20,
+  height: 40,
+  textAlign: "center",
+  backgroundColor: "#112240",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "#8892b0",
+  fontFamily: "Inter",
+  borderRadius: "4px",
 }));
 const Profile = styled("div")(({ theme }) => ({
   "@keyframes spin": {
     "0%": {
-      borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%"
-  },
-  "50%": {
-    borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%"
-  },
-  "100%": {
-      borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%"
-  }
+      borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
+    },
+    "50%": {
+      borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%",
+    },
+    "100%": {
+      borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
+    },
   },
   background: `url(${rv2})`,
   backgroundRepeat: "no-repeat",
@@ -200,15 +195,7 @@ const Profile = styled("div")(({ theme }) => ({
   width: "300px",
   height: "300px",
   boxShadow: "inset 0 0 0 4px rgb(100 255 218)",
-  animation: `spin 8s ease-in-out infinite 1s` ,
-
-  // boxShadow:
-//   "blue 0px 0px 0px 2px inset, #0a192f 15px 15px 0px -2px, rgb(100, 255, 218) 15px 15px",
-// boxShadow:
-// "rgba(100, 255, 218, 0.4) 5px 5px, rgba(100, 255, 218, 0.3) 10px 10px, rgba(100, 255, 218, 0.2) 15px 15px, rgba(100, 255, 218, 0.1) 20px 20px, rgba(100, 255, 218, 0.05) 25px 25px",
-// width: 230,
-// borderRadius: "4px",
-// filter: "grayscale(40%) contrast(1)",
+  animation: `spin 8s ease-in-out infinite 1s`,
 }));
 
 export default About;

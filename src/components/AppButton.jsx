@@ -14,6 +14,7 @@ const AppButton = styled(Button)(({ theme }) => ({
   transition: "all 0.4s ease",
   ":hover": {
     translate: "0 -2px",
+    backgroundColor : theme.palette.green.accent
   },
 }));
 

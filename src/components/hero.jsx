@@ -2,7 +2,7 @@ import { Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import AppButton from "./AppButton";
-import Underline from "../assets/underline.svg";
+
 
 function Hero(props) {
   const theme = useTheme();
@@ -65,7 +65,7 @@ function Hero(props) {
               sm: 60,
               md: 60,
             },
-            fontWeight: "bold",
+            fontFamily : "averta-bold",
             color: theme.palette.slate[200],
             mb: 1,
           }}
@@ -80,7 +80,7 @@ function Hero(props) {
               sm: 60,
               md: 60,
             },
-            fontWeight: "bold",
+            fontFamily : "averta-bold",
             color: theme.palette.slate[400],
             mb: 2,
             background:
@@ -104,9 +104,9 @@ function Hero(props) {
           }}
         >
           I'm a fullstack developer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I’m studied
-          computer science & engineering at
-          <span className="link">LNJP institute of technology</span>
+          designing) exceptional digital experiences. Currently, I'm studied
+          computer science & engineering at 
+          <span className="link"> LNJP institute of technology</span>
         </Typography>
 
         <AppButton

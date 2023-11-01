@@ -1,9 +1,11 @@
 import { createTheme } from "@mui/material";
+import  "./assets/avertastd-regular-webfont.woff"
 
 export const theme = createTheme({
   palette: {
     green: {
       main: "#64ffda",
+      accent : "rgba(94,234,212,0.1)"
     },
     slate: {
       200: "#ccd6f6",
@@ -16,7 +18,8 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Inter", "sans-serif"].join(","),
+
+    fontFamily: "averta",
     h2: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontWeight: 700,
@@ -25,5 +28,6 @@ export const theme = createTheme({
       fontFamily: ["Fira Code", "monospace"].join(","),
       fontSize: "1.2rem",
     },
+ 
   },
 });

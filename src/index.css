@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'averta';
+  src: url(./assets/avertastd-regular-webfont.woff)
+}
+@font-face {
+  font-family: 'averta-semi';
+  src: url(./assets/AvertaStd-Semibold.ttf)
+}
+@font-face {
+  font-family: 'averta-bold';
+  src: url(./assets/AvertaStd-Bold.ttf)
+}
+@font-face {
+  font-family: 'averta-black';
+  src: url(./assets/AvertaStd-Black.ttf)
+}
+@font-face {
+  font-family: 'averta-eb';
+  src: url(./assets/AvertaStd-ExtraBold.ttf)
+}
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -219,3 +239,5 @@ a {
 svg:hover {
   color: #64ffda !important;
 }
+
+/*  */

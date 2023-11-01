@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Blog from "./pages/blog";
 import NotFound from "./components/notFound";
 import ReadPost from "./pages/readPost";
+// ✍📧
 
 const router = createBrowserRouter([
   {

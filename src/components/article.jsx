@@ -38,7 +38,7 @@ function Article() {
           },
         }}
       >
-        <SectionHeader number={"04."} title={"Read my latest blog"} />
+        <SectionHeader number={"05."} title={"Read my latest blog"} />
 
         <Box display="flex" flexWrap="wrap" gap={3} justifyContent="center">
           <LoadingSpinner isLoading={isLoading} theme={theme} />
