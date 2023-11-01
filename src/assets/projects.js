@@ -7,7 +7,7 @@ export const projectsDetails = [
     github_url: "https://github.com/iritikdev/cloudify-host",
     live_url: "https://cloudify-host.netlify.app/",
     project_image:
-      "https://github.com/iritikdev/cloudify-host/blob/main/images/1.PNG",
+    "https://github.com/iritikdev/cloudify-host/blob/main/images/1.PNG?raw=true"
   },
   {
     id: 0,

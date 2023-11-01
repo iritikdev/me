@@ -16,10 +16,21 @@ const ProjectCardV2 = ({
 }) => {
   return (
     <Box
+    
+    px={4}
+    py={3}
       display={"flex"}
       columnGap={3}
       mb={8}
       flexDirection={{xs : "column-reverse", sm : "row", md : reverse ? "row-reverse" : "row"}}
+      sx={{
+        '&:hover' : {
+          backdropFilter : 'blur(16px) saturate(180%)',
+          backgroundColor: 'rgba(17, 25, 40, 0.75)',
+          border : "1px solid rgba(255, 255, 255, 0.125)",
+          borderRadius: "12px"
+        }
+      }}
     >
       <Box>
         <Typography

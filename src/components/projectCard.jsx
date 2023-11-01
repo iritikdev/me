@@ -59,6 +59,12 @@ function ProjectCard({ githubUrl, id, cover, description, title, url }) {
   ];
   return (
     <Container
+    sx={{
+      backdropFilter : 'blur(16px) saturate(180%)',
+      backgroundColor: 'rgba(17, 25, 40, 0.75)',
+      border : "1px solid rgba(255, 255, 255, 0.125)",
+      borderRadius: "12px"
+    }}
       key={id}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
@@ -70,13 +76,14 @@ function ProjectCard({ githubUrl, id, cover, description, title, url }) {
           image={cover}
           sx={{
             mb: 1.6,
-            borderRadius: 0.9,
+            borderRadius: "12px"
           }}
         />
         <Title
           color={isHover ? theme.palette.green.main : theme.palette.slate[200]}
           gutterBottom
           variant="h6"
+          fontFamily={"averta-semi"}
           component="div"
         >
           {title}
