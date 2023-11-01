@@ -1,9 +1,9 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import { Box, IconButton, Typography } from "@mui/material";
-import { theme } from "../theme";
+
+import { BsCalendar2Week } from "react-icons/bs";
+import { FiExternalLink, FiGithub, FiYoutube, } from "react-icons/fi";
 import { AnimatedButton } from "./AnimatedButton";
-import { FiExternalLink, FiGithub, FiYoutube, FiZoomIn } from "react-icons/fi";
-import { BsCalendar2, BsCalendar2Week } from "react-icons/bs";
 
 import Badge from "./Badge";
 const ProjectCardV2 = ({
@@ -19,7 +19,7 @@ const ProjectCardV2 = ({
       display={"flex"}
       columnGap={3}
       mb={8}
-      flexDirection={reverse ? "row-reverse" : "row"}
+      flexDirection={{xs : "column-reverse", sm : "row", md : reverse ? "row-reverse" : "row"}}
     >
       <Box>
         <Typography

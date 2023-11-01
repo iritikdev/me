@@ -67,8 +67,8 @@ function AcademyTimelineContent({
         {college}
       </Typography>
 
-      <Badge sm>{passingYear}</Badge>
-      <Badge sm>{score}</Badge>
+      <Badge colorScheme={"green"} sm>{passingYear}</Badge>
+      <Badge colorScheme={"green"} sm>{score}</Badge>
     </TimelineContent>
   );
 }
