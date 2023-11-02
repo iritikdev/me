@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Card,
   CardActions,
   CardContent,
@@ -16,6 +17,7 @@ import LoadingSpinner from "./LoadingSpinner";
 import TagList from "./TagList";
 import CardTitle from "./CardTitle";
 import CardSubtitle from "./CardSubtitle";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 function Article() {
   const { data: articles, isLoading, error } = useArticles();
@@ -55,6 +57,10 @@ function Article() {
                     cursor: "pointer",
                     backgroundColor: theme.palette.blue[400],
                     boxShadow: "none",
+                    backdropFilter : 'blur(16px) saturate(180%)',
+                    backgroundColor: 'rgba(17, 25, 40, 0.75)',
+                    border : "1px solid rgba(255, 255, 255, 0.125)",
+                    borderRadius: "12px",
                     transition: theme.transitions.create(
                       ["translate", "transform"],
                       {
@@ -67,7 +73,7 @@ function Article() {
                   }}
                 >
                   <Link to={`/blog/${post.id}`}>
-                    <CardMedia sx={{ height: 130 }} image={post.cover_image} />
+                    <CardMedia sx={{ height: 140 }} image={post.cover_image} />
 
                     <CardContent>
                       <CardTitle>{post.title}</CardTitle>
@@ -99,7 +105,7 @@ function Article() {
           }}
         >
           <Link to={"/blog"} color={theme.palette.green.main}>
-            <AppButton>Read more!</AppButton>
+            <Button endIcon={<RiArrowRightUpLine fontSize={16}  />} sx={{backgroundColor : "#8244ff" , px : 4, py : 1.25, borderRadius : "25px", fontSize:13, fontFamily : "inter", color: "white", "&:hover": {backgroundColor:"rgba(130, 68, 255, 0.8)"}}}>Read more</Button>
           </Link>
         </Box>
       </Box>

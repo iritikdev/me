@@ -1,13 +1,15 @@
 import { styled, Button } from "@mui/material";
 
 const AppButton = styled(Button)(({ theme }) => ({
+  display : "inline-flex",
+  columnGap : 2,
   color: theme.palette.green.main,
   backgroundColor: "transparent",
   border: `1px solid ${theme.palette.green.main}`,
   borderRadius: theme.shape.borderRadius,
   padding: "12px 16px",
   textTransform: "none",
-  fontSize: 12,
+  fontSize: 13,
   lineHeight: 1,
   textDecoration: "none",
   cursor: "pointer",

@@ -79,7 +79,7 @@ const ProjectCardV2 = ({
           height={160}
           src="https://www.pixeden.com/media/k2/galleries/856/001-screen-showcase-landing-page-devices-presentation-web-psd-projects.jpg"
         />
-        <Box display={"flex"} columnGap={2} mt={2}>
+        <Box display={"flex"} columnGap={2} mt={2} mb={{xs : 2}}>
           <AnimatedButton>
             <a href={"#"}>
               {<FiGithub size={22} color="#ccd6f6" strokeWidth={2} />}

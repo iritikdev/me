@@ -17,6 +17,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import AppButton from "./AppButton";
 import { logo, resume } from "../assets/index";
 import { styled } from "@mui/system";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 function HideOnScroll({ children, window }) {
   const trigger = useScrollTrigger({ target: window });
@@ -49,10 +50,15 @@ function Navbar(props) {
     <>
       <HideOnScroll {...props}>
         <AppBar
+        
           component={"nav"}
           sx={{
-            backgroundColor: "transparent",
-            backdropFilter: "blur(5px)",
+            backdropFilter : 'blur(16px) saturate(180%)',
+            backgroundColor: 'rgba(17, 25, 40, 0.75)',
+            borderBottom : "1px solid rgba(255, 255, 255, 0.125)",
+            
+           
+           
             px: {
               xs: 0.3,
               sm: 2,
@@ -64,7 +70,7 @@ function Navbar(props) {
           }}
         >
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Image src={logo} alt="Ritik Sharma logo" />
+            <Image src={logo} alt="logo" />
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item, index) => (
                 // <Link to={`/#${item.toLowerCase()}`}>
@@ -73,7 +79,7 @@ function Navbar(props) {
                   key={item}
                   sx={{
                     color: "#fff",
-                    fontSize: 11,
+                    fontSize: 12,
                     textTransform: "none",
                   }}
                 >
@@ -82,16 +88,16 @@ function Navbar(props) {
                       fontWeight: "300",
                       fontFamily: "Fira Code",
                       fontSize: 14,
-                      pr: 1,
+                      pr: 0.75,
                       color: theme.palette.green.main,
                     }}
                   >{`0${index + 1}. `}</Typography>
                   <Typography
                     sx={{
                       pr: 1,
-                      fontSize: 14,
+                      fontSize: 16,
                       fontWeight: "300",
-                      fontFamily: "Fira Code",
+                      fontFamily: "averta",
                       color: theme.palette.slate[200],
                       "&:hover": {
                         color: theme.palette.green.main,
@@ -102,25 +108,19 @@ function Navbar(props) {
                 // </Link>
               ))}
 
-              <AppButton
-                sx={{
-                  color: theme.palette.green.main,
-                  fontSize: 14,
-                  textTransform: "none",
-                  paddingY: 1,
-                  ml: 2,
-                }}
-              >
+              
                 <a
+
                   href={resume}
                   download
                   style={{
                     color: theme.palette.green.main,
+                    marginLeft : 25
                   }}
                 >
-                  Resume
+                  <Button  sx={{letterSpacing:1.1,backgroundColor : "#8244ff" , px : 2.5, py : 0.8, borderRadius : "25px", fontSize:11, fontFamily : "inter", color: "white", "&:hover": {backgroundColor:"rgba(130, 68, 255, 0.8)"}}}>Resume</Button>
                 </a>
-              </AppButton>
+            
             </Box>
             {/* Mobile menu start */}
             <Box
@@ -238,3 +238,4 @@ function Navbar(props) {
 }
 
 export default Navbar;
+   

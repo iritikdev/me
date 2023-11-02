@@ -1,12 +1,15 @@
 import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import AppButton from "./AppButton";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import { FaLocationArrow } from "react-icons/fa";
+import GradientButton from "./GradientButton";
 
 const contact = {
   title: "05. What's Next?",
   subTitle: "Get In Touch",
   content:
-    "Although I'm currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!",
+    "Although I'm currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
   buttonText: "Say Hello",
 };
 
@@ -28,7 +31,7 @@ function Contact(props) {
         <Typography
           sx={{
             fontFamily: "Fira Code",
-            fontSize: 12,
+            fontSize: 14,
             color: theme.palette.green.main,
           }}
         >
@@ -36,10 +39,10 @@ function Contact(props) {
         </Typography>
         <Typography
           sx={{
-            fontWeight: "bold",
+            fontFamily: "averta-bold",
             fontSize: {
               xs: 28,
-              md: 40,
+              md: 42,
             },
             color: theme.palette.slate[200],
             mb: 1.5,
@@ -56,7 +59,7 @@ function Contact(props) {
             fontSize: {
               xs: 13,
               sm: 14,
-              md: 14,
+              md: 16,
             },
             color: theme.palette.slate[400],
             mb: 5,
@@ -65,9 +68,12 @@ function Contact(props) {
           {contact.content}
         </Typography>
 
-        <AppButton href="mailto:iritikdev@gmail.com">
-          {contact.buttonText}
-        </AppButton>
+        <GradientButton
+          href="mailto:iritikdev@gmail.com"
+          endIcon={<RiArrowRightUpLine fontSize={16}  />}
+        >
+          Say Hello
+        </GradientButton>
       </Box>
     </div>
   );

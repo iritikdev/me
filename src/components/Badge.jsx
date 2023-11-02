@@ -14,8 +14,10 @@ function Badge({colorScheme, children, sm=false }) {
       fontFamily={"Inter"}
       fontSize={sm ? 11 : "small"}
       mr={1}
+      my={0.3}
       px={2}
       py={"5px"}
+    
     >
       {children}
     </Box>

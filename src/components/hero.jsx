@@ -2,6 +2,8 @@ import { Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import AppButton from "./AppButton";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import GradientButton from "./GradientButton";
 
 
 function Hero(props) {
@@ -109,23 +111,22 @@ function Hero(props) {
           <span className="link"> LNJP institute of technology</span>
         </Typography>
 
-        <AppButton
-          href="http://www.github.com/iritikdev"
-          sx={{
-            fontSize: {
-              xs: 13,
-              sm: 14,
-              md: 14,
-            },
-            mt: 5,
-            py: {
-              xs: 1.8,
-              sm: 2.2,
-            },
-          }}
+        <GradientButton
+        sx={{
+          fontSize: {
+            xs: 13,
+            sm: 14,
+            md: 14,
+          },
+          mt: 5,
+          py: 1.5
+        }}
+        href="http://www.github.com/iritikdev"
+          endIcon={<RiArrowRightUpLine fontSize={16}  />}
         >
-          Checkout my projects!
-        </AppButton>
+           Checkout projects
+        </GradientButton>
+        
       </Box>
     </div>
   );
