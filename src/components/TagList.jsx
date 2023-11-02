@@ -13,6 +13,10 @@ function TagList({ tag_list }) {
               sx={{
                 color: theme.palette.slate[200],
                 border: "none",
+                backdropFilter : 'blur(16px) saturate(180%)',
+                    backgroundColor: 'rgba(17, 25, 40, 0.75)',
+                    border : "1px solid rgba(255, 255, 255, 0.125)",
+                    borderRadius: "25px",
                 textTransform: "none",
                 "&:hover": {
                   color: theme.palette.slate[200],
@@ -23,10 +27,12 @@ function TagList({ tag_list }) {
                 sx={{
                   fontSize: 12,
                   fontWeight: "300",
-                  fontFamily: "Fira Code",
+                  fontFamily: "averta",
+                  px : 1,
+                  py : 0.25
                 }}
               >
-                {`#${item}`}
+                {`${item}`}
               </Typography>
             </Box>
           )}

@@ -66,17 +66,19 @@ function ReadPost(props) {
     <Box
       sx={{
         fontFamily: "Inter",
-        mt: 8,
-        mb: 6,
+        mt: 10,
+        mb: 10,
       }}
     >
       <Container
         sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" } }}
       >
+        
         <Box flex={8}>
           <Card
             key={post?.id}
             sx={{
+              
               backgroundColor: theme.palette.blue[800],
               color: theme.palette.slate[400],
               boxShadow: theme.shadows[0],
@@ -105,14 +107,19 @@ function ReadPost(props) {
                   variant="h5"
                   component="div"
                   sx={{
-                    fontWeight: "600",
+                   fontFamily : "averta-bold",
                     color: theme.palette.slate[200],
                     my: 2,
                   }}
                 >
                   {post?.title}
                 </Typography>
-                <List>
+                <List sx={{
+                  backdropFilter : 'blur(16px) saturate(180%)',
+                  backgroundColor: 'rgba(17, 25, 40, 0.75)',
+                  border : "1px solid rgba(255, 255, 255, 0.125)",
+                  borderRadius: "12px"
+                }}>
                   <ListItem alignItems="flex-start" key={post?.id}>
                     <ListItemAvatar>
                       <Avatar

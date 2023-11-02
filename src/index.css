@@ -105,14 +105,17 @@ a {
 /* blog post styling */
 .content {
   font-size: 16px !important;
+  
 }
 
 .content>h3 {
   margin: 10px 0px;
+  color : var(--color-heading)
 }
 
 .content>p,
 .content>ul {
+  color: var(--gray-25);
   line-height: 1.4;
   margin-bottom: 20px;
 }
@@ -133,7 +136,8 @@ a {
   border-radius: 5px;
   margin-bottom: 0.8rem;
   overflow-x: auto;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.6;
   /* background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,#def9fa .89%,#bef3f5 17.23%,#9dedf0 42.04%,#7de7eb 55.12%,#5ce1e6 71.54%,#64ffda 100%); */
 }
 

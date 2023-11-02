@@ -5,19 +5,19 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Typography,
+ 
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import { theme } from "../theme";
-import AppButton from "./AppButton";
-import SectionHeader from "./sectionHeader";
+
+import { RiArrowRightUpLine } from "react-icons/ri";
 import useArticles from "../hooks/useArticles";
+import CardSubtitle from "./CardSubtitle";
+import CardTitle from "./CardTitle";
 import LoadingSpinner from "./LoadingSpinner";
 import TagList from "./TagList";
-import CardTitle from "./CardTitle";
-import CardSubtitle from "./CardSubtitle";
-import { RiArrowRightUpLine } from "react-icons/ri";
+import SectionHeader from "./sectionHeader";
 
 function Article() {
   const { data: articles, isLoading, error } = useArticles();
@@ -55,7 +55,7 @@ function Article() {
                       sm: 275,
                     },
                     cursor: "pointer",
-                    backgroundColor: theme.palette.blue[400],
+                    
                     boxShadow: "none",
                     backdropFilter : 'blur(16px) saturate(180%)',
                     backgroundColor: 'rgba(17, 25, 40, 0.75)',

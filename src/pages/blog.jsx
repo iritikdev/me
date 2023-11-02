@@ -1,24 +1,22 @@
 import {
   Box,
   Card,
+  CardActions,
   CardContent,
   CardMedia,
   Container,
   Typography,
-  CardActions,
   useTheme,
 } from "@mui/material";
-import { Rings } from "react-loader-spinner";
-import { Link } from "react-router-dom";
 
-import AppButton from "../components/AppButton";
-import useArticles from "../hooks/useArticles";
+import { Link } from "react-router-dom";
+import CardSubtitle from "../components/CardSubtitle";
+import CardTitle from "../components/CardTitle";
 import LoadingSpinner from "../components/LoadingSpinner";
 import TagList from "../components/TagList";
-import CardTitle from "../components/CardTitle";
-import CardSubtitle from "../components/CardSubtitle";
+import useArticles from "../hooks/useArticles";
 
-function Blog(props) {
+function Blog() {
   const theme = useTheme();
   const { data: posts, isLoading, error } = useArticles();
 
@@ -30,6 +28,7 @@ function Blog(props) {
         color: theme.palette.slate[400],
         fontFamily: "Inter",
       }}
+      
     >
       <Container
         sx={{
@@ -50,7 +49,11 @@ function Blog(props) {
                 sm: 250,
               },
               cursor: "pointer",
-              backgroundColor: theme.palette.blue[400],
+              backdropFilter: "blur(16px) saturate(180%)",
+              backgroundColor: "rgba(17, 25, 40, 0.75)",
+              border: "1px solid rgba(255, 255, 255, 0.125)",
+              borderRadius: "12px",
+
               boxShadow: "none",
               transition: theme.transitions.create(["translate", "transform"], {
                 duration: theme.transitions.duration.standard,
@@ -62,12 +65,12 @@ function Blog(props) {
           >
             <Link to={`/blog/${post.id}`}>
               <CardMedia
-                sx={{ height: 120 }}
+                sx={{ height: 130 }}
                 image={post.cover_image}
-                title="green iguana"
+                
               />
               <CardContent>
-                <CardTitle>{post.title}</CardTitle>
+                <Typography sx={{fontFamily:"averta-bold", color : "slate.200", mb:0.8}}>{post.title}</Typography>
                 <CardSubtitle>{post.description}</CardSubtitle>
               </CardContent>
             </Link>
