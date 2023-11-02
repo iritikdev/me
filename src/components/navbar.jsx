@@ -50,15 +50,12 @@ function Navbar(props) {
     <>
       <HideOnScroll {...props}>
         <AppBar
-        
           component={"nav"}
           sx={{
-            backdropFilter : 'blur(16px) saturate(180%)',
-            backgroundColor: 'rgba(17, 25, 40, 0.75)',
-            borderBottom : "1px solid rgba(255, 255, 255, 0.125)",
-            
-           
-           
+            backdropFilter: "blur(16px) saturate(180%)",
+            backgroundColor: "rgba(17, 25, 40, 0.75)",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.125)",
+
             px: {
               xs: 0.3,
               sm: 2,
@@ -108,19 +105,30 @@ function Navbar(props) {
                 // </Link>
               ))}
 
-              
-                <a
-
-                  href={resume}
-                  download
-                  style={{
-                    color: theme.palette.green.main,
-                    marginLeft : 25
+              <a
+                href={resume}
+                download
+                style={{
+                  color: theme.palette.green.main,
+                  marginLeft: 25,
+                }}
+              >
+                <Button
+                  sx={{
+                    letterSpacing: 1.1,
+                    backgroundColor: "#8244ff",
+                    px: 2.5,
+                    py: 0.8,
+                    borderRadius: "25px",
+                    fontSize: 11,
+                    fontFamily: "inter",
+                    color: "white",
+                    "&:hover": { backgroundColor: "rgba(130, 68, 255, 0.8)" },
                   }}
                 >
-                  <Button  sx={{letterSpacing:1.1,backgroundColor : "#8244ff" , px : 2.5, py : 0.8, borderRadius : "25px", fontSize:11, fontFamily : "inter", color: "white", "&:hover": {backgroundColor:"rgba(130, 68, 255, 0.8)"}}}>Resume</Button>
-                </a>
-            
+                  Resume
+                </Button>
+              </a>
             </Box>
             {/* Mobile menu start */}
             <Box
@@ -155,6 +163,8 @@ function Navbar(props) {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
+                    justifyItems : "center",
+                    alignItems : "center",
                     rowGap: 3,
                   }}
                 >
@@ -166,7 +176,8 @@ function Navbar(props) {
                       sx={{
                         display: "flex",
                         textAlign: "center",
-                        justifyContent: "center",
+                        justifyContent : "center",
+                            alignItems : "center"
                       }}
                     >
                       <Button
@@ -180,6 +191,7 @@ function Navbar(props) {
                           sx={{
                             display: "flex",
                             flexDirection: "column",
+                            
                           }}
                         >
                           <Typography
@@ -208,24 +220,32 @@ function Navbar(props) {
                       </Button>
                     </ListItem>
                   ))}
-                  <AppButton
-                    sx={{
-                      py: 1.5,
+                  <a
+                    href={resume}
+                    download
+                    style={{
                       color: theme.palette.green.main,
-                      mx: 2,
+                      
                     }}
                   >
-                    <a
-                      href={resume}
-                      download
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
+                    <Button
+                      sx={{
+                        letterSpacing: 1.1,
+                        backgroundColor: "#8244ff",
+                        px: 2.5,
+                        py: 0.8,
+                        borderRadius: "25px",
+                        fontSize: 11,
+                        fontFamily: "inter",
+                        color: "white",
+                        "&:hover": {
+                          backgroundColor: "rgba(130, 68, 255, 0.8)",
+                        },
                       }}
                     >
                       Resume
-                    </a>
-                  </AppButton>
+                    </Button>
+                  </a>
                 </List>
               </Drawer>
             </Box>
@@ -238,4 +258,3 @@ function Navbar(props) {
 }
 
 export default Navbar;
-   

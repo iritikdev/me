@@ -19,7 +19,7 @@ function Footer(props) {
         py: 5,
       }}
     >
-      <Container sx={{display:"flex", justifyContent: "space-between", flexDirection:{xs: "column", sm: "row"}, alignItems:"center" }}>
+      <Container sx={{display:"flex", justifyContent: "space-between", flexDirection:{xs: "column", sm: "row"}, alignItems:"center", gap:2}}>
         <Typography color={"white"} display="flex" alignItems="center" gap={1}><AiOutlineCopyrightCircle /> Ritik Sharma</Typography>
         <Box display={"flex"} gap={2} >
         <FiGithub size={20} color="#ccd6f6" strokeWidth={2} />

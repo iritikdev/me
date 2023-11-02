@@ -57,8 +57,8 @@ function Contact(props) {
               md: 500,
             },
             fontSize: {
-              xs: 13,
-              sm: 14,
+              xs: 15,
+              sm: 15,
               md: 16,
             },
             color: theme.palette.slate[400],

@@ -97,18 +97,18 @@ function Hero(props) {
           variant="body2"
           sx={{
             fontSize: {
-              xs: 15,
+              xs: 16,
               sm: 17,
               md: 17,
             },
             color: theme.palette.slate[400],
-            maxWidth: "560px",
+            maxWidth: "575px",
           }}
         >
           I'm a fullstack developer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I'm studied
           computer science & engineering at 
-          <span className="link"> LNJP institute of technology</span>
+          <span className="link" style={{marginLeft : 5}}> LNJP institute of technology</span>
         </Typography>
 
         <GradientButton
