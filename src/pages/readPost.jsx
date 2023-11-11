@@ -4,7 +4,9 @@ import {
   Card,
   CardActions,
   CardContent,
+  CardHeader,
   CardMedia,
+  Divider,
   List,
   ListItem,
   ListItemAvatar,
@@ -137,38 +139,19 @@ function ReadPost(props) {
           </Card>
         </Box>
         <Box flex={3} pt={1.8}>
-          {/* <Card sx={{ bgcolor: "#112240", boxShadow: "none" }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={
-                  "https://c4.wallpaperflare.com/wallpaper/670/883/685/plexus-atoms-neutrons-electrons-wallpaper-preview.jpg"
-                }
-                alt="Ritik Sharma"
-              />
-              <CardContent sx={{ color: theme.palette.slate[200] }}>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  fontWeight={"500"}
-                >
-                  Ritik Kumar
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ color: theme.palette.slate[400] }}
-                >
-                  I’m a fullstack developer specializing in building (and
-                  occasionally designing) exceptional digital experiences.
-                  Currently, I’m studied computer science & engineering at LNJP
-                  institute of technology.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions></CardActions>
-          </Card> */}
+        <Card
+        sx={{
+          backdropFilter : 'blur(16px) saturate(180%)',
+          backgroundColor: 'rgba(17, 25, 40, 0.75)',
+          border : "1px solid rgba(255, 255, 255, 0.125)",
+          borderRadius: "12px"
+        }}
+        >
+          <CardContent>
+            <Typography fontFamily={"averta-semi"} fontSize={20} color={"slate.200"}>More from Ritik Sharma</Typography>
+            <Divider />
+          </CardContent>
+        </Card>
         </Box>
       </Container>
     </Box>
