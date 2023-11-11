@@ -87,10 +87,19 @@ function ReadPost(props) {
                     xs: 160,
                     sm: 350,
                   },
+                  borderRadius: 1,
                 }}
                 image={post?.cover_image}
                 title="cover image"
               />
+              <Box display="flex" my={4} columnGap={2}>
+                <Avatar alt={post?.user.name} src={post?.user.profile_image} />
+                <Box>
+                  <Typography fontFamily={"averta-bold"} fontSize={17}>{post?.user.name}</Typography>
+                  <Typography fontSize={14}>Post on {new Date(post?.published_at).toDateString()}</Typography>
+                </Box>
+              </Box>
+
               <Box
                 sx={{
                   color: theme.palette.slate[400],
@@ -102,60 +111,22 @@ function ReadPost(props) {
                   gutterBottom
                   variant="h5"
                   component="div"
+                  fontSize={28}
                   sx={{
                     fontFamily: "averta-bold",
                     color: theme.palette.slate[200],
-                    my:2
+                    my: 2,
                   }}
                 >
                   {post?.title}
                 </Typography>
-                <Box mb={2}>
+                <Box mb={4}>
                   {post?.tags.map((item, index) => (
-                    <Badge key={item.id} colorScheme={"violet"}>{item}</Badge>
+                    <Badge key={item.id} colorScheme={"violet"}>
+                      {item}
+                    </Badge>
                   ))}
                 </Box>
-                <List
-                  sx={{
-                    backdropFilter: "blur(16px) saturate(180%)",
-                    backgroundColor: "rgba(17, 25, 40, 0.75)",
-                    border: "1px solid rgba(255, 255, 255, 0.125)",
-                    borderRadius: "12px",
-                  }}
-                >
-                  <ListItem alignItems="flex-start" key={post?.id}>
-                    <ListItemAvatar>
-                      <Avatar
-                        alt={post?.user.name}
-                        src={post?.user.profile_image}
-                      />
-                    </ListItemAvatar>
-                    <ListItemText
-                      primaryTypographyProps={{
-                        sx: {
-                          fontWeight: "600",
-                          color: theme.palette.slate[200],
-                        },
-                      }}
-                      primary={post?.user.name}
-                      secondary={
-                        <React.Fragment>
-                          <Typography
-                            color={theme.palette.slate[400]}
-                            sx={{ display: "inline" }}
-                            component="span"
-                            variant="body1"
-                          >
-                            Published: {post?.readable_publish_date}
-                          </Typography>
-                          <Typography
-                            color={theme.palette.slate[400]}
-                          ></Typography>
-                        </React.Fragment>
-                      }
-                    />
-                  </ListItem>
-                </List>
               </Box>
               <Box
                 fontSize={16}
