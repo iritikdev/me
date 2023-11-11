@@ -1,9 +1,7 @@
 import {
   Avatar,
   Box,
-  Button,
   Card,
-  CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
@@ -14,14 +12,14 @@ import {
   Typography,
 } from "@mui/material";
 import { Container } from "@mui/system";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Rings } from "react-loader-spinner";
 import { useParams } from "react-router-dom";
-import AppButton from "../components/AppButton";
 import { getPostById } from "../services/postService";
 import { theme } from "../theme";
-import { Parser } from "html-to-react";
-import { Rings } from "react-loader-spinner";
-import Contact from "./../components/contact";
+import Markdown from "react-markdown";
+import AppButton from "./../components/AppButton";
+import Badge from "../components/Badge";
 
 function ReadPost(props) {
   const params = useParams();
@@ -73,12 +71,10 @@ function ReadPost(props) {
       <Container
         sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" } }}
       >
-        
         <Box flex={8}>
           <Card
             key={post?.id}
             sx={{
-              
               backgroundColor: theme.palette.blue[800],
               color: theme.palette.slate[400],
               boxShadow: theme.shadows[0],
@@ -107,19 +103,26 @@ function ReadPost(props) {
                   variant="h5"
                   component="div"
                   sx={{
-                   fontFamily : "averta-bold",
+                    fontFamily: "averta-bold",
                     color: theme.palette.slate[200],
-                    my: 2,
+                    my:2
                   }}
                 >
                   {post?.title}
                 </Typography>
-                <List sx={{
-                  backdropFilter : 'blur(16px) saturate(180%)',
-                  backgroundColor: 'rgba(17, 25, 40, 0.75)',
-                  border : "1px solid rgba(255, 255, 255, 0.125)",
-                  borderRadius: "12px"
-                }}>
+                <Box mb={2}>
+                  {post?.tags.map((item, index) => (
+                    <Badge key={item.id} colorScheme={"violet"}>{item}</Badge>
+                  ))}
+                </Box>
+                <List
+                  sx={{
+                    backdropFilter: "blur(16px) saturate(180%)",
+                    backgroundColor: "rgba(17, 25, 40, 0.75)",
+                    border: "1px solid rgba(255, 255, 255, 0.125)",
+                    borderRadius: "12px",
+                  }}
+                >
                   <ListItem alignItems="flex-start" key={post?.id}>
                     <ListItemAvatar>
                       <Avatar
@@ -154,41 +157,16 @@ function ReadPost(props) {
                   </ListItem>
                 </List>
               </Box>
-              <div
+              <Box
+                fontSize={16}
                 className="content"
                 dangerouslySetInnerHTML={{ __html: post?.body_html }}
-              ></div>
+              ></Box>
             </CardContent>
-            <CardActions>
-              {post?.tags.map((item, index) => (
-                <AppButton
-                  key={item.id}
-                  sx={{
-                    py: 0.1,
-                    px: 0.4,
-                    color: theme.palette.slate[200],
-                    textTransform: "none",
-                    "&:hover": {
-                      color: theme.palette.slate[200],
-                    },
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontSize: 12,
-                      fontWeight: "300",
-                      fontFamily: "Fira Code",
-                    }}
-                  >
-                    {item}
-                  </Typography>
-                </AppButton>
-              ))}
-            </CardActions>
           </Card>
         </Box>
         <Box flex={3} pt={1.8}>
-          <Card sx={{ bgcolor: "#112240", boxShadow: "none" }}>
+          {/* <Card sx={{ bgcolor: "#112240", boxShadow: "none" }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -219,7 +197,7 @@ function ReadPost(props) {
               </CardContent>
             </CardActionArea>
             <CardActions></CardActions>
-          </Card>
+          </Card> */}
         </Box>
       </Container>
     </Box>
