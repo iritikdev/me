@@ -7,22 +7,22 @@ import GradientButton from "./GradientButton";
 
 function Hero() {
   const theme = useTheme();
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
+  // const [windowSize, setWindowSize] = useState([
+  //   window.innerWidth,
+  //   window.innerHeight,
+  // ]);
 
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
+  // useEffect(() => {
+  //   const handleWindowResize = () => {
+  //     setWindowSize([window.innerWidth, window.innerHeight]);
+  //   };
 
-    window.addEventListener("resize", handleWindowResize);
+  //   window.addEventListener("resize", handleWindowResize);
 
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  });
+  //   return () => {
+  //     window.removeEventListener("resize", handleWindowResize);
+  //   };
+  // });
 
   return (
     <div id="" data-aos="fade-up">
@@ -55,7 +55,7 @@ function Hero() {
             fontFamily: "Fira Code",
           }}
         >
-          Namaste!, my name is
+          👋 Namaskaram!
         </Typography>
         <br />
         <Typography
