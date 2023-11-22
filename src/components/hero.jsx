@@ -1,12 +1,11 @@
-import { Typography, useTheme } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { Box } from "@mui/system";
-import React, { useState, useEffect } from "react";
-import AppButton from "./AppButton";
+import { Typography, useTheme } from "@mui/material";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import GradientButton from "./GradientButton";
 
 
-function Hero(props) {
+function Hero() {
   const theme = useTheme();
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
@@ -34,9 +33,9 @@ function Hero(props) {
             sm: "80dvh",
             md: "90dvh",
           },
-          mb: {
-            sm: windowSize[0] > 900 && windowSize[1] > 300 ? 30 : 0,
-          },
+          // mb: {
+          //   // sm: windowSize[0] > 900 && windowSize[1] > 300 ? 30 : 0,
+          // },
           marginTop: {
             xs: 22,
             md: 28,
