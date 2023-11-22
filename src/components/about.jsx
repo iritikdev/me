@@ -86,7 +86,7 @@ function About(props) {
                   <Typography
                     sx={{
                       textTransform: "none",
-                      fontSize: { xs: 12, sm: 12.5 },
+                      fontSize: { xs: 12, sm: 12.5, md : 13 },
                       fontWeight: "300",
                       fontFamily: "Fira Code",
                     }}
