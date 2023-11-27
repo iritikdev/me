@@ -1,7 +1,7 @@
 import { styled, Button } from "@mui/material";
 
 const GradientButton = styled(Button)(({ theme }) => ({
-  fontFamily: "inter",
+  fontFamily: "Sen Variable",
   fontSize: 13,
   background: "linear-gradient(to right, rgb(249, 38, 174), rgb(128, 40, 238))",
   borderRadius: "25px",

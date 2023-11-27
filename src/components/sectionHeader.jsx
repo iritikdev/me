@@ -7,18 +7,23 @@ function SectionHeader({ number, title }) {
   const theme = useTheme();
   return (
     <Box
-      sx={{ display: "inline-flex", alignItems: "center", pb: 6 }}
+      sx={{ display: "inline-flex", alignItems: "center", pb: 6, position:"relative" }}
       data-aos="fade-right"
+      mb={4}
     >
       <Typography
         sx={{
-          fontFamily: "Fira Code",
-          color: theme.palette.green.main,
+          fontFamily:"Sen Variable",
+          color: theme.palette.blue.main,
           pr: 1,
+          fontWeight : "700",
+          position:"absolute",
+          zIndex:-99999,
+          
           fontSize: {
-            xs: 16,
-            sm: 17,
-            md: 18,
+            xs: 100,
+           
+            md: 117,
           },
         }}
       >
@@ -33,9 +38,11 @@ function SectionHeader({ number, title }) {
             md: 24,
           },
           
-          
+          zIndex: 1000,
+          paddingLeft : [12,16],
           color: theme.palette.slate[200],
-          fontFamily: "averta-bold"
+          fontFamily: "Sen Variable",
+          fontWeight : 700,
         }}
       >
         {title}

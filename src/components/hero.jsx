@@ -4,7 +4,6 @@ import { Typography, useTheme } from "@mui/material";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import GradientButton from "./GradientButton";
 
-
 function Hero() {
   const theme = useTheme();
   // const [windowSize, setWindowSize] = useState([
@@ -47,17 +46,20 @@ function Hero() {
           },
         }}
       >
-        <Typography
-          component={"p"}
-          sx={{
-            fontSize: 14,
-            color: theme.palette.green.main,
-            fontFamily: "Fira Code",
-          }}
-        >
-          👋 Namaskaram!
-        </Typography>
-        <br />
+        <Box display="flex" columnGap={1} alignItems={"baseline"} mb={1}>
+          <Typography fontSize={[24, 32]}>👋</Typography>
+          <Typography
+            component={"p"}
+            sx={{
+              fontSize: [14, 16],
+              color: theme.palette.green.main,
+              fontFamily: "Fira Code",
+            }}
+          >
+            Namaskaram!
+          </Typography>
+        </Box>
+      
         <Typography
           variant="h3"
           sx={{
@@ -66,12 +68,13 @@ function Hero() {
               sm: 60,
               md: 60,
             },
-            fontFamily : "averta-bold",
+            fontFamily: "Sen Variable",
+            fontWeight : 700,
             color: theme.palette.slate[200],
             mb: 1,
           }}
         >
-          Ritik Sharma 
+          Ritik Sharma
         </Typography>
         <Typography
           variant="h3"
@@ -81,7 +84,8 @@ function Hero() {
               sm: 60,
               md: 60,
             },
-            fontFamily : "averta-bold",
+            fontFamily: "Sen Variable",
+            fontWeight : 700,
             color: theme.palette.slate[400],
             mb: 2,
             background:
@@ -94,38 +98,43 @@ function Hero() {
         </Typography>
         <Typography
           variant="body2"
+          fontFamily="Sen Variable"
+          lineHeight={1.5}
           sx={{
             fontSize: {
               xs: 16,
               sm: 17,
               md: 17,
             },
-            color: theme.palette.slate[400],
-            maxWidth: "575px",
+            color: theme.palette.slate[200],
+            maxWidth: "600px",
           }}
         >
           I'm a fullstack developer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I'm studied
-          computer science & engineering at 
-          <span className="link" style={{marginLeft : 5}}> LNJP institute of technology</span>
+          computer science & engineering at
+          <span className="link" style={{ marginLeft: 5 }}>
+            {" "}
+            LNJP institute of technology
+          </span>
         </Typography>
 
         <GradientButton
-        sx={{
-          fontSize: {
-            xs: 13,
-            sm: 14,
-            md: 14,
-          },
-          mt: 5,
-          py: 1.5
-        }}
-        href="http://www.github.com/iritikdev"
-          endIcon={<RiArrowRightUpLine fontSize={16}  />}
+          sx={{
+            fontSize: {
+              xs: 11,
+              sm: 14,
+              md: 14,
+            },
+            mt: [4,5],
+            py: [1.5],
+            px:  [3,4]
+          }}
+          href="http://www.github.com/iritikdev"
+          endIcon={<RiArrowRightUpLine fontSize={16} />}
         >
-           Checkout projects
+          Checkout projects
         </GradientButton>
-        
       </Box>
     </div>
   );

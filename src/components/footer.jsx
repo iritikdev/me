@@ -5,10 +5,6 @@ import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 function Footer(props) {
   return (
     <>
-    {/* <Box display={"flex"} justifyContent={"center"} position={"relative"} >
-      <Box sx={{width : "100px", height: "100px", bgcolor : "violet.main", position: "absolute", top: "-1px", borderRadius:"100%", filter:"blur(16px)", overflowY: "hidden" }} />
-    </Box> */}
-    
 
     <Box
       sx={{
@@ -20,15 +16,18 @@ function Footer(props) {
       }}
     >
       <Container sx={{display:"flex", justifyContent: "space-between", flexDirection:{xs: "column", sm: "row"}, alignItems:"center", gap:2}}>
-        <Typography color={"white"} display="flex" alignItems="center" gap={1}><AiOutlineCopyrightCircle /> Ritik Sharma</Typography>
+        <Typography color={"white"} display="flex" alignItems="center" gap={1}>No Copyright {new Date().getFullYear()} </Typography>
         <Box display={"flex"} gap={2} >
-        <FiGithub size={20} color="#ccd6f6" strokeWidth={2} />
-        <FiLinkedin size={20} color="#ccd6f6" strokeWidth={2} />
+          <a href="https://github.com/iritikdev" target="_blank" rel="noopener noreferrer">  <FiGithub size={20} color="#ccd6f6" strokeWidth={2} /></a>
+          <a href="https://www.linkedin.com/in/iritikdev" target="_blank" rel="noopener noreferrer"> <FiLinkedin size={20} color="#ccd6f6" strokeWidth={2} /></a>
+       
+       
         <FiTwitter size={20} color="#ccd6f6" strokeWidth={2} />
         </Box>
-        <Box display={"flex"} gap={2}>
-          <Typography color={"white"}>Terms of Use</Typography>
-          <Typography color={"white"}>Privacy Policy</Typography>
+        <Box display={"flex"} >
+          <Typography  fontFamily= "Sen Variable"
+            color={"white"} mr={0.6}>Developed by</Typography>
+          <Typography fontFamily= "Sen Variable" color={"white"}>Ritik Sharma</Typography>
         </Box>
       </Container>
     </Box>

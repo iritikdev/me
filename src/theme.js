@@ -17,6 +17,7 @@ export const theme = createTheme({
     },
     slate: {
       200: "#ccd6f6",
+      300: "#aeb6cf",
       400: "#8892b0",
     },
     blue: {

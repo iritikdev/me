@@ -39,15 +39,17 @@ function About(props) {
           },
         }}
       >
-        <SectionHeader title={"About Me"} number={"01."} />
+        <SectionHeader number={"01."} title={"About Me"}  />
         <Stack direction={{ xs: "column", md: "row" }} flex gap={6.5}>
           <Box flex={7}>
             {aboutMe.map((text, index) => {
               return (
                 <Typography
                   key={index}
-                  color={theme.palette.slate[400]}
+                  fontFamily={"Sen Variable"}
+                  color={theme.palette.slate[300]}
                   pb={2}
+                  lineHeight={1.5}
                   sx={{
                     fontSize: {
                       xs: 15,
@@ -86,8 +88,9 @@ function About(props) {
                   <Typography
                     sx={{
                       textTransform: "none",
-                      fontSize: { xs: 12, sm: 12.5, md : 13 },
+                      fontSize: { xs: 12, sm: 12.5, md : 14 },
                       fontWeight: "300",
+                      color: theme.palette.slate[300],
                       fontFamily: "Fira Code",
                     }}
                   >
