@@ -1,5 +1,4 @@
 import { Box, Container, Typography } from "@mui/material";
-import { AiOutlineCopyrightCircle } from 'react-icons/ai'
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 function Footer(props) {
