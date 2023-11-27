@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./navbar";
-import Footer from './Footer';
+import Footer from './footer';
 
 const Root = () => {
   const [loading, setLoading] = React.useState(true);
